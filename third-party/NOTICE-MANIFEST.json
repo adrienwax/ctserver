@@ -1,0 +1,1025 @@
+{
+  "status": "NOTICE_COLLECTION_NOT_DISTRIBUTION_CLEARANCE",
+  "packages": [
+    {
+      "package": "@serialport/binding-mock",
+      "version": "10.2.2",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_binding-mock-10.2.2/LICENSE",
+          "sha256": "043e85e0a83eca4b33f6bc4e1f02e6382e1d9cf72a7a07dec36ddf0e83fe4254"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/bindings-cpp",
+      "version": "12.0.1",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/serialport/bindings-cpp.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_bindings-cpp-12.0.1/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-delimiter",
+      "version": "11.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-delimiter-11.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-readline",
+      "version": "11.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-readline-11.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "node-addon-api",
+      "version": "7.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/nodejs/node-addon-api.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/node-addon-api-7.0.0/LICENSE.md",
+          "sha256": "4fcf69bbecb999ec8fa0ece62bc8934b7cdd45061ac1a8b1939a09be64cd4352"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/bindings-interface",
+      "version": "1.2.2",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_bindings-interface-1.2.2/LICENSE",
+          "sha256": "043e85e0a83eca4b33f6bc4e1f02e6382e1d9cf72a7a07dec36ddf0e83fe4254"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-byte-length",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-byte-length-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-cctalk",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-cctalk-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-delimiter",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-delimiter-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-inter-byte-timeout",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-inter-byte-timeout-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-packet-length",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-packet-length-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-readline",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-readline-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-ready",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-ready-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-regex",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-regex-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-slip-encoder",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-slip-encoder-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-spacepacket",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-spacepacket-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/stream",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_stream-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "base64-js",
+      "version": "1.5.1",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/beatgammit/base64-js.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/base64-js-1.5.1/LICENSE",
+          "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1"
+        }
+      ]
+    },
+    {
+      "package": "bl",
+      "version": "4.1.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/rvagg/bl.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/bl-4.1.0/LICENSE.md",
+          "sha256": "9377db95383c8befacf05c6e465d969d756edf178487ca1344fdf3ba147c596f"
+        }
+      ]
+    },
+    {
+      "package": "buffer",
+      "version": "5.7.1",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/feross/buffer.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/buffer-5.7.1/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        }
+      ]
+    },
+    {
+      "package": "canvas",
+      "version": "3.2.3",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/Automattic/node-canvas.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/canvas-3.2.3/Readme.md",
+          "sha256": "bcc4f31a3021a059492128fe2748e276ea5fbab360cdac3ce8a5ab4156b17924"
+        },
+        {
+          "file": "third-party/licenses/canvas-3.2.3/src/bmp/LICENSE.md",
+          "sha256": "bc4c710e3829994e377c65b6671d2efe79236d852f1b514514c311706ea152bf"
+        }
+      ]
+    },
+    {
+      "package": "chownr",
+      "version": "1.1.4",
+      "declaredLicense": "ISC",
+      "repository": "git://github.com/isaacs/chownr.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/chownr-1.1.4/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "package": "color-name",
+      "version": "2.1.1",
+      "declaredLicense": "MIT",
+      "repository": "git+https://github.com/colorjs/color-name.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/color-name-2.1.1/LICENSE",
+          "sha256": "7357445bac398c76c0aef75a587009fe406d40de6a79789eb5b7ecbbad317ef2"
+        }
+      ]
+    },
+    {
+      "package": "color-parse",
+      "version": "2.1.2",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/colorjs/color-parse",
+      "notices": [
+        {
+          "file": "third-party/licenses/color-parse-2.1.2/LICENSE",
+          "sha256": "af45ae40c7d031f40e77e09fd33b12700e96ea861c4a73f0dff3294d47e60a81"
+        }
+      ]
+    },
+    {
+      "package": "color-rgba",
+      "version": "3.1.1",
+      "declaredLicense": "MIT",
+      "repository": "git+https://github.com/colorjs/color-rgba.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/color-rgba-3.1.1/LICENSE",
+          "sha256": "aa81b6e6ec7319e1af6e32ba5544200e324266fb4a63b40762f93e3343f1ce7d"
+        }
+      ]
+    },
+    {
+      "package": "color-space",
+      "version": "3.1.0",
+      "declaredLicense": "CC0-1.0",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/color-space-3.1.0/license.md",
+          "sha256": "0c09623fa4f2a2404bbd8bbb2556a4be91db6366ff05b6eb58074f5e003f814c"
+        }
+      ]
+    },
+    {
+      "package": "debug",
+      "version": "4.3.4",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/debug-js/debug.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/debug-4.3.4/LICENSE",
+          "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95"
+        }
+      ]
+    },
+    {
+      "package": "decompress-response",
+      "version": "6.0.0",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/decompress-response-6.0.0/license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "package": "deep-extend",
+      "version": "0.6.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/unclechu/node-deep-extend.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/deep-extend-0.6.0/LICENSE",
+          "sha256": "e17120ad3deff741c2ca5cbe511971ca33971a1ba6e49694c6498309bb2680b9"
+        }
+      ]
+    },
+    {
+      "package": "detect-libc",
+      "version": "2.1.2",
+      "declaredLicense": "Apache-2.0",
+      "repository": "git://github.com/lovell/detect-libc.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/detect-libc-2.1.2/LICENSE",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        }
+      ]
+    },
+    {
+      "package": "end-of-stream",
+      "version": "1.4.5",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/mafintosh/end-of-stream.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/end-of-stream-1.4.5/LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ]
+    },
+    {
+      "package": "expand-template",
+      "version": "2.0.3",
+      "declaredLicense": "(MIT OR WTFPL)",
+      "repository": "https://github.com/ralphtheninja/expand-template.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/expand-template-2.0.3/LICENSE",
+          "sha256": "0967624813244bf47da346449804af853437433cbdeb8c977f1e0d4bd14e0a3b"
+        }
+      ]
+    },
+    {
+      "package": "fs-constants",
+      "version": "1.0.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/mafintosh/fs-constants.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/fs-constants-1.0.0/LICENSE",
+          "sha256": "2281f2db407bdbb54f069eec38128b2dee2c0c952f52b786ef1faecb81767b3c"
+        }
+      ]
+    },
+    {
+      "package": "github-from-package",
+      "version": "0.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/substack/github-from-package.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/github-from-package-0.0.0/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        }
+      ]
+    },
+    {
+      "package": "ieee754",
+      "version": "1.2.1",
+      "declaredLicense": "BSD-3-Clause",
+      "repository": "git://github.com/feross/ieee754.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/ieee754-1.2.1/LICENSE",
+          "sha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1"
+        }
+      ]
+    },
+    {
+      "package": "inherits",
+      "version": "2.0.4",
+      "declaredLicense": "ISC",
+      "repository": "git://github.com/isaacs/inherits",
+      "notices": [
+        {
+          "file": "third-party/licenses/inherits-2.0.4/LICENSE",
+          "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b"
+        }
+      ]
+    },
+    {
+      "package": "ini",
+      "version": "1.3.8",
+      "declaredLicense": "ISC",
+      "repository": "git://github.com/isaacs/ini.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/ini-1.3.8/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "package": "loupedeck",
+      "version": "7.0.3",
+      "declaredLicense": "MIT",
+      "repository": "git+https://github.com/foxxyz/loupedeck.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/loupedeck-7.0.3/LICENSE",
+          "sha256": "7f79040e45f46e73f37ce743153d710327acf9e5dea78d8f97cc11ef3316a444"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/bindings-cpp",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/serialport/bindings-cpp.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_bindings-cpp-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-byte-length",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-byte-length-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-cctalk",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-cctalk-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-delimiter",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-delimiter-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-inter-byte-timeout",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-inter-byte-timeout-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-packet-length",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-packet-length-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-ready",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-ready-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-regex",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-regex-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-slip-encoder",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-slip-encoder-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-spacepacket",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-spacepacket-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/stream",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_stream-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "debug",
+      "version": "4.4.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/debug-js/debug.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/debug-4.4.0/LICENSE",
+          "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95"
+        }
+      ]
+    },
+    {
+      "package": "ms",
+      "version": "2.1.3",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/ms-2.1.3/license.md",
+          "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801"
+        }
+      ]
+    },
+    {
+      "package": "node-addon-api",
+      "version": "8.3.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/nodejs/node-addon-api.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/node-addon-api-8.3.0/LICENSE.md",
+          "sha256": "89024017b88a9f2b763f79b941a4f2db3b4428edfcacdc0b23866b2da633ad0c"
+        }
+      ]
+    },
+    {
+      "package": "node-gyp-build",
+      "version": "4.8.4",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/prebuild/node-gyp-build.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/node-gyp-build-4.8.4/LICENSE",
+          "sha256": "7b3638496004b2daed183a91c4ba45d3ef6331db6c9d0eb1dd882a505630c172"
+        }
+      ]
+    },
+    {
+      "package": "serialport",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/serialport-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "@serialport/parser-readline",
+      "version": "13.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/_serialport_parser-readline-13.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "mimic-response",
+      "version": "3.1.0",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/mimic-response-3.1.0/license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "package": "minimist",
+      "version": "1.2.8",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/minimistjs/minimist.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/minimist-1.2.8/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        }
+      ]
+    },
+    {
+      "package": "mkdirp-classic",
+      "version": "0.5.3",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/mafintosh/mkdirp-classic.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/mkdirp-classic-0.5.3/LICENSE",
+          "sha256": "a255b85c1a510ecfe660c4d442ecdbc1e9d07f4b4d3d7f90443f7e5570591e0a"
+        }
+      ]
+    },
+    {
+      "package": "ms",
+      "version": "2.1.2",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/ms-2.1.2/license.md",
+          "sha256": "6652830c2607c722b66f1b57de15877ab8fc5dca406cc5b335afeb365d0f32c1"
+        }
+      ]
+    },
+    {
+      "package": "napi-build-utils",
+      "version": "2.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git+https://github.com/inspiredware/napi-build-utils.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/napi-build-utils-2.0.0/LICENSE",
+          "sha256": "9c6a91d2847bd9bfd493c1ca87b9c3f96302cfd069667e6dd4a6278e69a33a31"
+        }
+      ]
+    },
+    {
+      "package": "node-abi",
+      "version": "3.96.0",
+      "declaredLicense": "MIT",
+      "repository": "git+https://github.com/electron/node-abi.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/node-abi-3.96.0/LICENSE",
+          "sha256": "9a508cd4122f2dc1cc39f8ab0b6950efbc49fb087a581c7177a4b8c9d5d0d6a1"
+        }
+      ]
+    },
+    {
+      "package": "node-addon-api",
+      "version": "7.1.1",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/nodejs/node-addon-api.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/node-addon-api-7.1.1/LICENSE.md",
+          "sha256": "89024017b88a9f2b763f79b941a4f2db3b4428edfcacdc0b23866b2da633ad0c"
+        }
+      ]
+    },
+    {
+      "package": "node-gyp-build",
+      "version": "4.6.0",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/prebuild/node-gyp-build.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/node-gyp-build-4.6.0/LICENSE",
+          "sha256": "7b3638496004b2daed183a91c4ba45d3ef6331db6c9d0eb1dd882a505630c172"
+        }
+      ]
+    },
+    {
+      "package": "once",
+      "version": "1.4.0",
+      "declaredLicense": "ISC",
+      "repository": "git://github.com/isaacs/once",
+      "notices": [
+        {
+          "file": "third-party/licenses/once-1.4.0/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "package": "prebuild-install",
+      "version": "7.1.3",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/prebuild/prebuild-install.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/prebuild-install-7.1.3/LICENSE",
+          "sha256": "0aa9add6a9158efad3e6649e3affd607c7e2629f6677af19f9988c8fbb0757b0"
+        }
+      ]
+    },
+    {
+      "package": "pump",
+      "version": "3.0.4",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/mafintosh/pump.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/pump-3.0.4/LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ]
+    },
+    {
+      "package": "rc",
+      "version": "1.2.8",
+      "declaredLicense": "(BSD-2-Clause OR MIT OR Apache-2.0)",
+      "repository": "https://github.com/dominictarr/rc.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/rc-1.2.8/LICENSE.APACHE2",
+          "sha256": "e8734448285a2dd773d40136ed5d5e8163a70701dd540cdc796cfca232f67d55"
+        },
+        {
+          "file": "third-party/licenses/rc-1.2.8/LICENSE.BSD",
+          "sha256": "65e7e4d223688c601f42959defde380f8c4aa677fa4706da3b4a53f129bd78a3"
+        },
+        {
+          "file": "third-party/licenses/rc-1.2.8/LICENSE.MIT",
+          "sha256": "d72dea1a8cdf3f4dfa2f594253d0c5b37baefc76e806f5ecb0e426393edcd505"
+        }
+      ]
+    },
+    {
+      "package": "readable-stream",
+      "version": "3.6.2",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/nodejs/readable-stream",
+      "notices": [
+        {
+          "file": "third-party/licenses/readable-stream-3.6.2/LICENSE",
+          "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54"
+        }
+      ]
+    },
+    {
+      "package": "safe-buffer",
+      "version": "5.2.1",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/feross/safe-buffer.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/safe-buffer-5.2.1/LICENSE",
+          "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac"
+        }
+      ]
+    },
+    {
+      "package": "semver",
+      "version": "7.8.5",
+      "declaredLicense": "ISC",
+      "repository": "git+https://github.com/npm/node-semver.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/semver-7.8.5/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "package": "serialport",
+      "version": "12.0.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/serialport/node-serialport.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/serialport-12.0.0/LICENSE",
+          "sha256": "12b8f57dbef742496d1356e7773fdf32924724bf1cdb2cd833c448611d04a525"
+        }
+      ]
+    },
+    {
+      "package": "simple-concat",
+      "version": "1.0.1",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/feross/simple-concat.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/simple-concat-1.0.1/LICENSE",
+          "sha256": "d4c2065e2b936e62a4eb400efb4576edec9ca1388a9f78aa288e147275e7bc8b"
+        }
+      ]
+    },
+    {
+      "package": "simple-get",
+      "version": "4.0.1",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/feross/simple-get.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/simple-get-4.0.1/LICENSE",
+          "sha256": "d4c2065e2b936e62a4eb400efb4576edec9ca1388a9f78aa288e147275e7bc8b"
+        }
+      ]
+    },
+    {
+      "package": "strict-event-emitter",
+      "version": "0.5.1",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": []
+    },
+    {
+      "package": "string_decoder",
+      "version": "1.3.0",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/nodejs/string_decoder.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/string_decoder-1.3.0/LICENSE",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b"
+        }
+      ]
+    },
+    {
+      "package": "strip-json-comments",
+      "version": "2.0.1",
+      "declaredLicense": "MIT",
+      "repository": "",
+      "notices": [
+        {
+          "file": "third-party/licenses/strip-json-comments-2.0.1/license",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c"
+        }
+      ]
+    },
+    {
+      "package": "tar-fs",
+      "version": "2.1.5",
+      "declaredLicense": "MIT",
+      "repository": "https://github.com/mafintosh/tar-fs.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/tar-fs-2.1.5/LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ]
+    },
+    {
+      "package": "tar-stream",
+      "version": "2.2.0",
+      "declaredLicense": "MIT",
+      "repository": "git+https://github.com/mafintosh/tar-stream.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/tar-stream-2.2.0/LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ]
+    },
+    {
+      "package": "tunnel-agent",
+      "version": "0.6.0",
+      "declaredLicense": "Apache-2.0",
+      "repository": "https://github.com/mikeal/tunnel-agent",
+      "notices": [
+        {
+          "file": "third-party/licenses/tunnel-agent-0.6.0/LICENSE",
+          "sha256": "d446a8c73d7bbe4872d6524b15ae206f9a2d7eb53f8c9cb6e6c893a43acc5276"
+        }
+      ]
+    },
+    {
+      "package": "util-deprecate",
+      "version": "1.0.2",
+      "declaredLicense": "MIT",
+      "repository": "git://github.com/TooTallNate/util-deprecate.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/util-deprecate-1.0.2/LICENSE",
+          "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7"
+        }
+      ]
+    },
+    {
+      "package": "wrappy",
+      "version": "1.0.2",
+      "declaredLicense": "ISC",
+      "repository": "https://github.com/npm/wrappy",
+      "notices": [
+        {
+          "file": "third-party/licenses/wrappy-1.0.2/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "package": "ws",
+      "version": "8.22.0",
+      "declaredLicense": "MIT",
+      "repository": "git+https://github.com/websockets/ws.git",
+      "notices": [
+        {
+          "file": "third-party/licenses/ws-8.22.0/LICENSE",
+          "sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef"
+        }
+      ]
+    },
+    {
+      "package": "electron-runtime",
+      "version": "43.6.0",
+      "notices": [
+        {
+          "file": "third-party/electron-43.6.0/LICENSE.electron.txt",
+          "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d"
+        },
+        {
+          "file": "third-party/electron-43.6.0/LICENSES.chromium.html",
+          "sha256": "c971fa90cb787337e9df73773f3b43cd5621f035e53cded439bd927b3b759e0c"
+        }
+      ],
+      "scope": "Electron and Chromium notices; not a complete native-binary SBOM"
+    }
+  ],
+  "gaps": [
+    {
+      "package": "strict-event-emitter",
+      "version": "0.5.1",
+      "reason": "Full licence text absent from installed package and exact upstream v0.5.1 tree; MIT declaration retained, no attribution fabricated.",
+      "upstreamCommit": "56e004cf2793053ea9ece4330fd52cace96acbff",
+      "source": "https://github.com/open-draft/strict-event-emitter/tree/56e004cf2793053ea9ece4330fd52cace96acbff"
+    }
+  ],
+  "remaining": [
+    "Final bundled dependency reconciliation",
+    "Binary provenance and licence obligations",
+    "Exact-source availability for MPL/GPL components where applicable"
+  ]
+}

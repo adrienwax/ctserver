@@ -1,0 +1,13 @@
+config.json
+node_modules/
+*.log
+/config/.lastgood/
+/config/.history/
+/build/ct/
+/build-info.json
+
+/release/
+/config/.shipped/
+/config/.updates/
+/config/.upgrade-history/
+/config/.generated/

@@ -1,0 +1,873 @@
+{
+  "_help": "Moshpit control through its local authenticated endpoint. Home returns to the dashboard. Pages follow IN, MOSH FX, MOSH EDIT and OUT. A plays, B pauses, C/D step backward/forward. KBD gives fine adjustments; Fn gives coarse adjustments. Edit mappings in MAP; changes autosave.",
+  "name": "MOSHPIT",
+  "color": "coral",
+  "app": "moshpit",
+  "followWorkspace": true,
+  "stripGestures": false,
+  "pages": [
+    {
+      "name": "IN",
+      "enter": {
+        "moshpit": {
+          "verb": "command",
+          "command": "workspace.browse"
+        }
+      },
+      "keys": {
+        "0": {
+          "label": "ALL FRAMES",
+          "icon": "source",
+          "sub": "RANGE",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "source.selectAll"
+            }
+          },
+          "color": "sky"
+        },
+        "2": {
+          "label": "CLIP -",
+          "icon": "back",
+          "sub": "IN",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "clip.prev"
+            }
+          },
+          "color": "dust"
+        },
+        "3": {
+          "label": "CLIP +",
+          "icon": "forward",
+          "sub": "IN",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "clip.next"
+            }
+          },
+          "color": "dust"
+        },
+        "4": {
+          "label": "ADD BLOCK",
+          "icon": "add",
+          "sub": "MARKED RANGE",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "source.addBlock"
+            }
+          },
+          "color": "cyan"
+        },
+        "8": {
+          "label": "MARK IN",
+          "icon": "mark-in",
+          "sub": "HEAD",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "mark.in"
+            }
+          },
+          "color": "sand"
+        },
+        "9": {
+          "label": "MARK OUT",
+          "icon": "mark-out",
+          "sub": "HEAD",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "mark.out"
+            }
+          },
+          "color": "sand"
+        },
+        "10": {
+          "label": "SEND A",
+          "icon": "import",
+          "sub": "MARKED RANGE",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "source.sendA"
+            }
+          },
+          "color": "cyan"
+        },
+        "11": {
+          "label": "SEND B",
+          "icon": "import",
+          "sub": "MARKED RANGE",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "source.sendB"
+            }
+          },
+          "color": "cyan"
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "IN",
+          "turn": {
+            "moshpit": {
+              "verb": "step",
+              "commands": [
+                "mark.in.nudgeBack",
+                "mark.in.nudgeForward"
+              ]
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "command",
+              "command": "mark.in"
+            }
+          }
+        },
+        "CL": {
+          "name": "OUT",
+          "turn": {
+            "moshpit": {
+              "verb": "step",
+              "commands": [
+                "mark.out.nudgeBack",
+                "mark.out.nudgeForward"
+              ]
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "command",
+              "command": "mark.out"
+            }
+          }
+        },
+        "BL": {
+          "name": "TRANSPOSE",
+          "turn": {
+            "moshpit": {
+              "verb": "step",
+              "commands": [
+                "mark.range.nudgeBack",
+                "mark.range.nudgeForward"
+              ]
+            }
+          }
+        },
+        "TR": {
+          "name": "CLIP",
+          "turn": {
+            "moshpit": {
+              "verb": "step",
+              "commands": [
+                "clip.prev",
+                "clip.next"
+              ]
+            }
+          }
+        },
+        "CR": {
+          "name": "FOLDER",
+          "turn": {
+            "moshpit": {
+              "verb": "step",
+              "commands": [
+                "folder.prev",
+                "folder.next"
+              ]
+            }
+          }
+        },
+        "BR": {
+          "name": "ZOOM",
+          "turn": {
+            "moshpit": {
+              "verb": "step",
+              "commands": [
+                "source.zoomOut",
+                "source.zoomIn"
+              ]
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "command",
+              "command": "source.zoomFit"
+            }
+          }
+        }
+      },
+      "buttons": {
+        "enter": {
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "source.sendA"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "MOSH FX",
+      "enter": {
+        "moshpit": {
+          "verb": "command",
+          "command": "workspace.mosh"
+        }
+      },
+      "keys": {
+        "0": {
+          "label": "FX 1",
+          "icon": "effect",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 1
+            }
+          }
+        },
+        "1": {
+          "label": "FX 2",
+          "icon": "effect",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 2
+            }
+          }
+        },
+        "2": {
+          "label": "FX 3",
+          "icon": "effect",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 3
+            }
+          }
+        },
+        "3": {
+          "label": "FX 4",
+          "icon": "effect",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 4
+            }
+          }
+        },
+        "4": {
+          "label": "NODE -",
+          "icon": "back",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "selstep",
+              "step": -1
+            }
+          }
+        },
+        "5": {
+          "label": "NODE +",
+          "icon": "forward",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "selstep",
+              "step": 1
+            }
+          }
+        },
+        "6": {
+          "label": "P1-6",
+          "icon": "layers",
+          "sub": "PARAM PAGE",
+          "do": {
+            "moshpit": {
+              "verb": "bank",
+              "width": 6
+            }
+          }
+        },
+        "7": {
+          "label": "THAW",
+          "color": "dust",
+          "icon": "freeze",
+          "sub": "BLK",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "block.unfreeze"
+            }
+          }
+        },
+        "8": {
+          "label": "FREEZE",
+          "icon": "freeze",
+          "sub": "BLK",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "block.freeze"
+            }
+          }
+        },
+        "9": {
+          "label": "GRAPH",
+          "icon": "node",
+          "sub": "EDIT NODES",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "workspace.node"
+            }
+          }
+        },
+        "10": {
+          "label": "BLOCK -",
+          "icon": "back",
+          "sub": "MOSH",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "block.prev"
+            }
+          }
+        },
+        "11": {
+          "label": "BLOCK +",
+          "icon": "forward",
+          "sub": "MOSH",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "block.next"
+            }
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "PARAM 1",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 1,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 1,
+              "bankWidth": 6
+            }
+          }
+        },
+        "CL": {
+          "name": "PARAM 2",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 2,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 2,
+              "bankWidth": 6
+            }
+          }
+        },
+        "BL": {
+          "name": "PARAM 3",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 3,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 3,
+              "bankWidth": 6
+            }
+          }
+        },
+        "TR": {
+          "name": "PARAM 4",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 4,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 4,
+              "bankWidth": 6
+            }
+          }
+        },
+        "CR": {
+          "name": "PARAM 5",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 5,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 5,
+              "bankWidth": 6
+            }
+          }
+        },
+        "BR": {
+          "name": "PARAM 6",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 6,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 6,
+              "bankWidth": 6
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "MOSH EDIT",
+      "enter": {
+        "moshpit": {
+          "verb": "command",
+          "command": "workspace.node"
+        }
+      },
+      "keys": {
+        "0": {
+          "label": "NODE 1",
+          "icon": "node",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 1
+            }
+          }
+        },
+        "1": {
+          "label": "NODE 2",
+          "icon": "node",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 2
+            }
+          }
+        },
+        "2": {
+          "label": "NODE 3",
+          "icon": "node",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 3
+            }
+          }
+        },
+        "3": {
+          "label": "NODE 4",
+          "icon": "node",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "select",
+              "slot": 4
+            }
+          }
+        },
+        "4": {
+          "label": "NODE -",
+          "icon": "back",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "selstep",
+              "step": -1
+            }
+          }
+        },
+        "5": {
+          "label": "NODE +",
+          "icon": "forward",
+          "sub": "SELECT",
+          "do": {
+            "moshpit": {
+              "verb": "selstep",
+              "step": 1
+            }
+          }
+        },
+        "6": {
+          "label": "P1-6",
+          "icon": "layers",
+          "sub": "PARAM PAGE",
+          "do": {
+            "moshpit": {
+              "verb": "bank",
+              "width": 6
+            }
+          }
+        },
+        "7": {
+          "label": "ON / OFF",
+          "icon": "effect",
+          "sub": "SEL",
+          "do": {
+            "moshpit": {
+              "verb": "toggle",
+              "slot": "sel",
+              "param": "bypass"
+            }
+          }
+        },
+        "8": {
+          "label": "THAW",
+          "color": "dust",
+          "icon": "freeze",
+          "sub": "BLK",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "block.unfreeze"
+            }
+          }
+        },
+        "9": {
+          "label": "MOSH",
+          "icon": "mosh",
+          "sub": "BACK TO EDIT",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "workspace.mosh"
+            }
+          }
+        },
+        "10": {
+          "label": "BLOCK -",
+          "icon": "back",
+          "sub": "MOSH",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "block.prev"
+            }
+          }
+        },
+        "11": {
+          "label": "BLOCK +",
+          "icon": "forward",
+          "sub": "MOSH",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "block.next"
+            }
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "PARAM 1",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 1,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 1,
+              "bankWidth": 6
+            }
+          }
+        },
+        "CL": {
+          "name": "PARAM 2",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 2,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 2,
+              "bankWidth": 6
+            }
+          }
+        },
+        "BL": {
+          "name": "PARAM 3",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 3,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 3,
+              "bankWidth": 6
+            }
+          }
+        },
+        "TR": {
+          "name": "PARAM 4",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 4,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 4,
+              "bankWidth": 6
+            }
+          }
+        },
+        "CR": {
+          "name": "PARAM 5",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 5,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 5,
+              "bankWidth": 6
+            }
+          }
+        },
+        "BR": {
+          "name": "PARAM 6",
+          "turn": {
+            "moshpit": {
+              "verb": "knob",
+              "slot": "sel",
+              "bank": 6,
+              "bankWidth": 6
+            }
+          },
+          "press": {
+            "moshpit": {
+              "verb": "reset",
+              "slot": "sel",
+              "bank": 6,
+              "bankWidth": 6
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "OUT",
+      "enter": {
+        "moshpit": {
+          "verb": "command",
+          "command": "workspace.render"
+        }
+      },
+      "keys": {
+        "0": {
+          "label": "MOSH",
+          "icon": "mosh",
+          "sub": "BACK TO EDIT",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "workspace.mosh"
+            }
+          }
+        },
+        "3": {
+          "label": "SETTINGS",
+          "icon": "settings",
+          "sub": "PREFERENCES",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "workspace.settings"
+            }
+          }
+        },
+        "11": {
+          "label": "RENDER",
+          "icon": "render",
+          "sub": "OUT",
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "render.start"
+            }
+          }
+        }
+      },
+      "dials": {},
+      "buttons": {
+        "enter": {
+          "do": {
+            "moshpit": {
+              "verb": "command",
+              "command": "render.start"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "everyPage": {
+    "keys": {},
+    "buttons": {
+      "home": {
+        "do": {
+          "main": true
+        }
+      },
+      "save": {
+        "do": {
+          "keys": "ctrl+s"
+        }
+      },
+      "undo": {
+        "do": {
+          "moshpit": {
+            "verb": "command",
+            "command": "edit.undo"
+          }
+        },
+        "hold": {
+          "moshpit": {
+            "verb": "command",
+            "command": "edit.redo"
+          }
+        }
+      },
+      "a": {
+        "do": {
+          "moshpit": {
+            "verb": "command",
+            "command": "transport.play"
+          }
+        }
+      },
+      "b": {
+        "do": {
+          "moshpit": {
+            "verb": "command",
+            "command": "transport.stop"
+          }
+        }
+      },
+      "c": {
+        "do": {
+          "moshpit": {
+            "verb": "command",
+            "command": "transport.prevFrame"
+          }
+        }
+      },
+      "d": {
+        "do": {
+          "moshpit": {
+            "verb": "command",
+            "command": "transport.nextFrame"
+          }
+        }
+      }
+    },
+    "wheel": {
+      "turn": {
+        "moshpit": {
+          "verb": "step",
+          "commands": [
+            "transport.prevFrame",
+            "transport.nextFrame"
+          ]
+        }
+      },
+      "tap": {
+        "moshpit": {
+          "verb": "command",
+          "command": "transport.loop"
+        }
+      }
+    }
+  }
+}

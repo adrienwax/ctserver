@@ -1,0 +1,37 @@
+{
+  "_help": "Generic app definitions. Open your app normally, or configure a verified executable in apps.json. No projects or personal launch paths are supplied.",
+  "moshpit": {
+    "name": "Moshpit",
+    "color": "coral",
+    "exe": "Moshpit 3.exe",
+    "target": "moshpit",
+    "endpointFile": "%APPDATA%/Moshpit 3/control-endpoint.json"
+  },
+  "touchdesigner": {
+    "name": "TouchDesigner",
+    "color": "cyan",
+    "exe": "TouchDesigner.exe",
+    "target": "td"
+  },
+  "windows": {
+    "name": "Windows",
+    "color": "sage",
+    "target": "keys",
+    "default": "windows"
+  },
+  "spotify": {
+    "name": "Spotify",
+    "color": "green",
+    "exe": "Spotify.exe",
+    "target": "native",
+    "driver": "windows-media",
+    "default": "spotify"
+  },
+  "resolve": {
+    "name": "DaVinci Resolve",
+    "color": "magenta",
+    "exe": "Resolve.exe",
+    "target": "keys",
+    "default": "resolve"
+  }
+}

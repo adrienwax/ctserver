@@ -1,0 +1,601 @@
+{
+  "name": "WINDOWS",
+  "color": "sage",
+  "app": "windows",
+  "_help": "DESK controls Windows globally. FILES targets File Explorer. EDIT targets the active editor: click the intended text first. Relative shortcut dials have no absolute-value feedback. A/B/C/D retain global media play-pause/stop/previous/next. KBD/FN are rotary modifiers, never reassigned. HOVER SCROLL: point at the intended pane first; clockwise scrolls down. It is a Windows pointer-wheel action, not a guarantee of scrolling the focused app.",
+  "everyPage": {
+    "buttons": {
+      "home": {
+        "do": {
+          "main": true
+        }
+      },
+      "a": {
+        "do": {
+          "media": "playpause"
+        }
+      },
+      "b": {
+        "do": {
+          "media": "stop"
+        }
+      },
+      "c": {
+        "do": {
+          "media": "prev"
+        }
+      },
+      "d": {
+        "do": {
+          "media": "next"
+        }
+      }
+    }
+  },
+  "pages": [
+    {
+      "name": "DESK",
+      "keys": {
+        "0": {
+          "label": "TASK VIEW",
+          "icon": "tasks",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+tab"
+          }
+        },
+        "1": {
+          "label": "FILES",
+          "icon": "folder",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+e"
+          }
+        },
+        "2": {
+          "label": "SEARCH",
+          "icon": "look",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+s"
+          }
+        },
+        "3": {
+          "label": "SNAP LEFT",
+          "icon": "view",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+left"
+          }
+        },
+        "4": {
+          "label": "SNAP RIGHT",
+          "icon": "view",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+right"
+          }
+        },
+        "5": {
+          "label": "MAXIMISE",
+          "icon": "view",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+up"
+          }
+        },
+        "6": {
+          "label": "RESTORE",
+          "icon": "view",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+down"
+          }
+        },
+        "7": {
+          "label": "DESKTOP",
+          "icon": "desktop",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+d"
+          }
+        },
+        "8": {
+          "label": "CLIPBOARD",
+          "icon": "layers",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+v"
+          }
+        },
+        "9": {
+          "label": "SETTINGS",
+          "icon": "settings",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+i"
+          }
+        },
+        "10": {
+          "label": "SCREENSHOT",
+          "icon": "view",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "win+shift+s"
+          }
+        },
+        "11": {
+          "label": "TASK MGR",
+          "icon": "tasks",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+shift+esc"
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "VOLUME",
+          "turn": {
+            "volume": 1
+          },
+          "press": {
+            "media": "mute"
+          }
+        },
+        "CL": {
+          "name": "DESKTOP",
+          "turn": {
+            "keys": [
+              "win+ctrl+left",
+              "win+ctrl+right"
+            ]
+          }
+        },
+        "BL": {
+          "name": "WINDOW",
+          "turn": {
+            "keys": [
+              "alt+shift+esc",
+              "alt+esc"
+            ]
+          }
+        },
+        "TR": {
+          "name": "MONITOR",
+          "turn": {
+            "keys": [
+              "win+shift+left",
+              "win+shift+right"
+            ]
+          }
+        },
+        "CR": {
+          "name": "SNAP",
+          "turn": {
+            "keys": [
+              "win+left",
+              "win+right"
+            ]
+          }
+        },
+        "BR": {
+          "name": "SIZE",
+          "turn": {
+            "keys": [
+              "win+down",
+              "win+up"
+            ]
+          }
+        }
+      },
+      "wheel": {
+        "name": "WINDOW",
+        "turn": {
+          "keys": [
+            "alt+shift+esc",
+            "alt+esc"
+          ]
+        },
+        "tap": {
+          "keys": "win+tab"
+        }
+      }
+    },
+    {
+      "name": "FILES",
+      "inputExe": "explorer.exe",
+      "keys": {
+        "0": {
+          "label": "NEW WINDOW",
+          "icon": "folder",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+n"
+          }
+        },
+        "1": {
+          "label": "UP FOLDER",
+          "icon": "back",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "alt+up"
+          }
+        },
+        "2": {
+          "label": "ADDRESS",
+          "icon": "folder",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+l"
+          }
+        },
+        "3": {
+          "label": "FIND",
+          "icon": "look",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+f"
+          }
+        },
+        "4": {
+          "label": "NEW FOLDER",
+          "icon": "add",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+shift+n"
+          }
+        },
+        "5": {
+          "label": "RENAME",
+          "icon": "keyboard",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "f2"
+          }
+        },
+        "6": {
+          "label": "COPY",
+          "icon": "layers",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+c"
+          }
+        },
+        "7": {
+          "label": "PASTE",
+          "icon": "layers",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+v"
+          }
+        },
+        "8": {
+          "label": "PROPERTIES",
+          "icon": "settings",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "alt+enter"
+          }
+        },
+        "9": {
+          "label": "DETAILS",
+          "icon": "layers",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+shift+6"
+          }
+        },
+        "10": {
+          "label": "ICONS",
+          "icon": "view",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+shift+2"
+          }
+        },
+        "11": {
+          "label": "PREVIEW",
+          "icon": "view",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "alt+p"
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "ITEM",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          },
+          "press": {
+            "keys": "enter"
+          }
+        },
+        "CL": {
+          "name": "HISTORY",
+          "turn": {
+            "keys": [
+              "alt+left",
+              "alt+right"
+            ]
+          }
+        },
+        "BL": {
+          "name": "PAGE",
+          "turn": {
+            "keys": [
+              "pageup",
+              "pagedown"
+            ]
+          }
+        },
+        "TR": {
+          "name": "SCROLL",
+          "turn": {
+            "scroll": -1
+          }
+        },
+        "CR": {
+          "name": "EXTEND",
+          "turn": {
+            "keys": [
+              "shift+up",
+              "shift+down"
+            ]
+          }
+        },
+        "BR": {
+          "name": "PANE",
+          "turn": {
+            "keys": [
+              "shift+tab",
+              "tab"
+            ]
+          }
+        }
+      },
+      "wheel": {
+        "name": "ITEM",
+        "turn": {
+          "keys": [
+            "up",
+            "down"
+          ]
+        },
+        "tap": {
+          "keys": "enter"
+        }
+      }
+    },
+    {
+      "name": "EDIT",
+      "keys": {
+        "0": {
+          "label": "COPY",
+          "icon": "layers",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+c"
+          }
+        },
+        "1": {
+          "label": "PASTE",
+          "icon": "layers",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+v"
+          }
+        },
+        "2": {
+          "label": "CUT",
+          "icon": "slice",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+x"
+          }
+        },
+        "3": {
+          "label": "SELECT ALL",
+          "icon": "layers",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+a"
+          }
+        },
+        "4": {
+          "label": "FIND",
+          "icon": "look",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+f"
+          }
+        },
+        "5": {
+          "label": "UNDO",
+          "icon": "undo",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+z"
+          }
+        },
+        "6": {
+          "label": "REDO",
+          "icon": "redo",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+y"
+          }
+        },
+        "7": {
+          "label": "SAVE",
+          "icon": "save",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+s"
+          }
+        },
+        "8": {
+          "label": "DOC START",
+          "icon": "back",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+home"
+          }
+        },
+        "9": {
+          "label": "DOC END",
+          "icon": "forward",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+end"
+          }
+        },
+        "10": {
+          "label": "PREV TAB",
+          "icon": "back",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+shift+tab"
+          }
+        },
+        "11": {
+          "label": "NEXT TAB",
+          "icon": "forward",
+          "sub": "",
+          "color": "sage",
+          "do": {
+            "keys": "ctrl+tab"
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "CHARACTER",
+          "turn": {
+            "keys": [
+              "left",
+              "right"
+            ]
+          }
+        },
+        "CL": {
+          "name": "WORD",
+          "turn": {
+            "keys": [
+              "ctrl+left",
+              "ctrl+right"
+            ]
+          }
+        },
+        "BL": {
+          "name": "LINE",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          }
+        },
+        "TR": {
+          "name": "SELECT",
+          "turn": {
+            "keys": [
+              "shift+left",
+              "shift+right"
+            ]
+          }
+        },
+        "CR": {
+          "name": "PAGE",
+          "turn": {
+            "keys": [
+              "pageup",
+              "pagedown"
+            ]
+          }
+        },
+        "BR": {
+          "name": "TAB",
+          "turn": {
+            "keys": [
+              "ctrl+shift+tab",
+              "ctrl+tab"
+            ]
+          }
+        }
+      },
+      "wheel": {
+        "name": "CURSOR",
+        "turn": {
+          "keys": [
+            "left",
+            "right"
+          ]
+        }
+      },
+      "buttons": {
+        "undo": {
+          "do": {
+            "keys": "ctrl+z"
+          },
+          "hold": {
+            "keys": "ctrl+y"
+          },
+          "redo": {
+            "keys": "ctrl+y"
+          }
+        },
+        "save": {
+          "do": {
+            "keys": "ctrl+s"
+          }
+        },
+        "enter": {
+          "do": {
+            "keys": "enter"
+          }
+        }
+      }
+    }
+  ]
+}

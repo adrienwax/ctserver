@@ -1,0 +1,443 @@
+{
+  "name": "SPOTIFY",
+  "app": "spotify",
+  "color": "green",
+  "followFocus": false,
+  "_help": "PLAYER targets the Spotify Windows media session; unsupported actions are unavailable, never global fallbacks. LIBRARY uses official Spotify shortcuts. Click a list before LIST/FOCUS. SYS VOL is Windows volume. Position is reported seconds: KBD 1s, normal 5s, FN 30s. Repeat: 0 off, 1 track, 2 list. Shortcut controls have no invented state. A play, B pause, C/D previous/next; FN/KBD stay modifiers. HOVER SCROLL: point at the intended pane first; clockwise scrolls down. It is a Windows pointer-wheel action, not a guarantee of scrolling the focused app.",
+  "everyPage": {
+    "buttons": {
+      "home": {
+        "do": {
+          "main": true
+        }
+      },
+      "a": {
+        "do": {
+          "native": {
+            "verb": "command",
+            "command": "transport.play"
+          }
+        }
+      },
+      "b": {
+        "do": {
+          "native": {
+            "verb": "command",
+            "command": "transport.pause"
+          }
+        }
+      },
+      "c": {
+        "do": {
+          "native": {
+            "verb": "command",
+            "command": "transport.previous"
+          }
+        }
+      },
+      "d": {
+        "do": {
+          "native": {
+            "verb": "command",
+            "command": "transport.next"
+          }
+        }
+      },
+      "enter": {
+        "do": {
+          "keys": "enter"
+        }
+      }
+    },
+    "wheel": {
+      "name": "POSITION",
+      "turn": {
+        "native": {
+          "verb": "turn",
+          "parameter": "position"
+        }
+      },
+      "tap": {
+        "native": {
+          "verb": "command",
+          "command": "transport.toggle"
+        }
+      }
+    }
+  },
+  "pages": [
+    {
+      "name": "PLAYER",
+      "keys": {
+        "0": {
+          "label": "SETTINGS",
+          "icon": "settings",
+          "color": "green",
+          "do": {
+            "keys": "ctrl+,"
+          }
+        },
+        "1": {
+          "label": "SHORTCUTS",
+          "icon": "keyboard",
+          "color": "green",
+          "do": {
+            "keys": "ctrl+/"
+          }
+        },
+        "2": {
+          "label": "FOR YOU",
+          "icon": "look",
+          "color": "green",
+          "do": {
+            "keys": "alt+shift+m"
+          }
+        },
+        "3": {
+          "label": "NEW",
+          "icon": "more",
+          "color": "green",
+          "do": {
+            "keys": "alt+shift+n"
+          }
+        },
+        "4": {
+          "label": "SHUFFLE",
+          "icon": "tasks",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "native": {
+              "verb": "toggle",
+              "parameter": "shuffle"
+            }
+          }
+        },
+        "5": {
+          "label": "REPEAT",
+          "icon": "loop",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "native": {
+              "verb": "command",
+              "command": "repeat.cycle"
+            }
+          }
+        },
+        "6": {
+          "label": "NOW PLAY",
+          "icon": "view",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+j"
+          }
+        },
+        "7": {
+          "label": "QUEUE",
+          "icon": "layers",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+q"
+          }
+        },
+        "8": {
+          "label": "SEARCH",
+          "icon": "look",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "ctrl+k"
+          }
+        },
+        "9": {
+          "label": "LIBRARY",
+          "icon": "folder",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+0"
+          }
+        },
+        "10": {
+          "label": "LIKE",
+          "icon": "add",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+b"
+          }
+        },
+        "11": {
+          "label": "PLAYER",
+          "icon": "view",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+r"
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "SYS VOL",
+          "turn": {
+            "volume": 1
+          },
+          "press": {
+            "media": "mute"
+          }
+        },
+        "CL": {
+          "name": "POSITION",
+          "turn": {
+            "native": {
+              "verb": "turn",
+              "parameter": "position"
+            }
+          },
+          "press": {
+            "native": {
+              "verb": "reset",
+              "parameter": "position"
+            }
+          }
+        },
+        "BL": {
+          "name": "REPEAT",
+          "turn": {
+            "native": {
+              "verb": "turn",
+              "parameter": "repeat"
+            }
+          },
+          "press": {
+            "native": {
+              "verb": "reset",
+              "parameter": "repeat"
+            }
+          }
+        },
+        "TR": {
+          "name": "LIST",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          },
+          "press": {
+            "keys": "enter"
+          }
+        },
+        "CR": {
+          "name": "HISTORY",
+          "turn": {
+            "keys": [
+              "alt+left",
+              "alt+right"
+            ]
+          }
+        },
+        "BR": {
+          "name": "FOCUS",
+          "turn": {
+            "keys": [
+              "shift+tab",
+              "tab"
+            ]
+          },
+          "press": {
+            "keys": "enter"
+          }
+        }
+      }
+    },
+    {
+      "name": "LIBRARY",
+      "keys": {
+        "0": {
+          "label": "PLAYLISTS",
+          "icon": "layers",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+1"
+          }
+        },
+        "1": {
+          "label": "ARTISTS",
+          "icon": "source",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+3"
+          }
+        },
+        "2": {
+          "label": "ALBUMS",
+          "icon": "clip",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+4"
+          }
+        },
+        "3": {
+          "label": "LIKED",
+          "icon": "add",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+s"
+          }
+        },
+        "4": {
+          "label": "FOR YOU",
+          "icon": "look",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+m"
+          }
+        },
+        "5": {
+          "label": "NEW",
+          "icon": "more",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+n"
+          }
+        },
+        "6": {
+          "label": "CHARTS",
+          "icon": "tasks",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+c"
+          }
+        },
+        "7": {
+          "label": "PODCASTS",
+          "icon": "volume",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+2"
+          }
+        },
+        "8": {
+          "label": "HOME",
+          "icon": "home",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+h"
+          }
+        },
+        "9": {
+          "label": "FILTER",
+          "icon": "look",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "ctrl+f"
+          }
+        },
+        "10": {
+          "label": "CONTEXT",
+          "icon": "more",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+j"
+          }
+        },
+        "11": {
+          "label": "SIDE LIB",
+          "icon": "layers",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "keys": "alt+shift+l"
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "SYS VOL",
+          "turn": {
+            "volume": 1
+          },
+          "press": {
+            "media": "mute"
+          }
+        },
+        "CL": {
+          "name": "LIST",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          },
+          "press": {
+            "keys": "enter"
+          }
+        },
+        "BL": {
+          "name": "PAGE",
+          "turn": {
+            "keys": [
+              "pageup",
+              "pagedown"
+            ]
+          }
+        },
+        "TR": {
+          "name": "HISTORY",
+          "turn": {
+            "keys": [
+              "alt+left",
+              "alt+right"
+            ]
+          }
+        },
+        "CR": {
+          "name": "FOCUS",
+          "turn": {
+            "keys": [
+              "shift+tab",
+              "tab"
+            ]
+          },
+          "press": {
+            "keys": "enter"
+          }
+        },
+        "BR": {
+          "name": "SCROLL",
+          "turn": {
+            "scroll": -1
+          }
+        }
+      },
+      "wheel": {
+        "name": "LIST",
+        "turn": {
+          "keys": [
+            "up",
+            "down"
+          ]
+        },
+        "tap": {
+          "keys": "enter"
+        }
+      }
+    }
+  ]
+}

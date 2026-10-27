@@ -1,0 +1,7 @@
+{
+  "_help": "Timings for the CT. holdMs: how long a press counts as a hold (ms). escapeHoldMs: hold round button 1 this long to jump back to MAIN from anywhere and release any stuck keys. knobStep: how far one dial click moves a TD value (0.02 = 50 clicks end to end). startProfile: the profile shown when waxyct starts.",
+  "holdMs": 500,
+  "escapeHoldMs": 1000,
+  "knobStep": 0.02,
+  "startProfile": "main"
+}

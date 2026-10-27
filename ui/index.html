@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>CTserver · KRAB v1.0</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAQrElEQVR4nOWbe5BcxXWHv9P3MbPz2F2tVqt37AgERMKWQRJIGBwQRpKDBQ5GpkjFkUEEB1QVu1KR4/KzwA624yRFuQpwEh6hSCVlCyiIURAyBmyjSEgIWwHxsCwZW0LSrrSv2ZnZmXtvd+ePe2e00q6k3Z3FhuS3davu3unHOadPn3P6dLcwMiR5DEB76+xLUHIl2A9hmY/QDNikzDsBMS2WAsJukJ9g7Majfft/mvyukjL2xIojMaCoMT5p9nUiss5iLxZRAhZrh7XxjoJIPHbWGivI89bau4727v9e8nOdt3r5E+o7gJ48efYMsdwnolYCWGsAdFJeva0cNA5DPNKOSEyqtWaTFdZ2d+8/SMJjrfBQASTMz1qMlceVqOnWGp3oufPbo3/iYEELIKIcY80hxF7d3X1gB0OEUBOAAkxb26wLBLVJhEnWmgjE/R3RPsGwkYhyraXXYlb29BzYTsJzXaWnTHlPh9F6l4h0WGs179JRPwW0iDjW2i7lOAuOHPl1F8TMC2BMFD0oojqstRH/95gHcKy1kYjqMFH0ILGtEAFoa5t5rRK1IWH+tGrvKIWok3tAa8EYzYkOQ0RwnFPbUK3NME8jAko5CbUn6dNYtDEnL3AMkYi4xprVPT1vPewCIpb1iFiwp/XrIkJhoEgQhIxIkbU4jkM+n0UpVWdGRAjDiN7e0nBnXGsbyOWyeJ57XD1jDP39/WitT9qn73vkctnRuGkBsWJZDzwira2zL3EUz4B1GEVgEwQhyy5dypILFhAE4XGaYI3F8z3efPMAjz6+Ga01juMk9QKmtE/m2mtWks9n0drUebEWHEcxMFDi4Uc3ceRoN77vA9TbuObq5bz3vbMIR+jT9z22bd/FM89txfe907EAYEG0NixzlTJXiTju6Qyf4zj09vXzub/6c77+9fVwitEg5bNy+SX82drP4bouQRAypX0y//X4vZw1by5EerioLeA63LjmWv7o6ps42t2L73uEYcR9372DP75uFVSDk/fpOHzpS9/m7/7xX5jU2hJry8lhRMRVSl/lAhdZLPYUoy8iBGHIlClt3PSp1QwOFCmVBlFqpPlsERFWXXk5ixcvYMeLu6hUAv7i5us5a95cut7qxHVHlnMUac6aN5drP76Sf7jzfrTRLF68gFVXXk7voa5EvYeTaYwhm23ipk+t5oGHHqFcruA4zqmmgyRR8UWutfL+5J9TWidjLKlUCs/zMMbgeW4Sdo5UNjZGuWwGY2Ii8rksNopwXeekAgCwUUQ+l633mctmYopF6tNpWB2rEpo8UqkUxeIgJylag7LWYq28X4mQO2XR4zoyGGNPyviJGKqGWutR1RORYfVGg9hY2lrYPso65Nx4Ao1mVVezyqNuPykbL8JGK7S4ngypN9b+jvU5wuLvRNhaIPT/FeKeXkgJEoGOaTU8ZCDGsoy21o5hEIfWO77P0dQd09JWRFBKRs3MUC/hqFNa5TqstTjqmAUb2dOMXE8pGdNUA3BHK2BRQqVaJQhDlFKEYfWUbhCgWCojSrBAoVhCXJcoOrlRiyKNuC6FYhwtihKKpXKdwSiKOJkb9H2PIAypVKv1PkfD26iWu9ZaPM+j60gP9z6wgb/92/U0ZZpOGQg9+r0f8MKOXTQ1pVHKYcMjT7J2zbWcNX8uhCcJhDyHX+zew4ZHniSTacL3PV7YsYv/3PgjrhlFIHTvN++h60jPaAKhOmTSpJljynEFQcjll9VC4eg4eqwFz3P51a8P8OhjI4fCqz/+EfK5zMihcLHMhkeeHDkU/thyfv89swjD4X36vsu27bv40bOjDoXHLwARoVgsjXsxVCyObzE0MFCaqMXQ8X2OVQDwrl8OHwd3TH4mgTb6hNzq6GES5oYzWeNuuPmyFrSOxtfhafBbyfkpx8EaQxgEhJUq1lpczztmCC1EYYiI4KVTeL6PKIUZpSFrBKN2g+OBchRGGwb6+vBSKdpnTOOsRefRPnM6M854L06yKNKR5uDeNzn61iF+8eLPOHrwMGG1Siafr7fxdkFaJ814W2TgOA6lwgDpTIaFyy9l8Uc+zHvmnU1TLgPGEAUBNlkpihJc3welGCyW+fWrb7DjyafZufk5KuUy2eb8qN3aWDHhAqjN5VKhwLkfvJCP/eXNzD1/AdVSicGBElZHOAKuCDU7aixE1qItiOPSlM+SymbZ89IuHvvOP/PKlhfINjcDYwupR0XvRApAJA6Tw0qVj95yA6tuvRGjNaXefvyUDzqir7OT/sNd9B86zGA5jvKaMhlapk+jZVoHrVOnguMSVAOyk1pQjsMP7r6fJ+55AC+dqvcxYTRPlABqhFVKZdbc/nmWr7me7kOHcRwHRyl2b3+RXT/ZwqE39qDCgCiKmNocJz46CyVc18V4PtPPnsuCD32Q+RcsQhuD1prJ06ex+cH/4MGvfJN0NjOhQphQAVQHK3zyq+v58J9+gp7DXWTyWXq7jvLIPz3Arh9voclz6GhrJpdp4pOXnMdHF54DwBM7X+ehn/6MYnmQrp4Cg6FmwR9+kI9/+gYmdbRTHijRNq2Dp//t+zx027dJNaUnTAATstGpHIdSf4FVt9zA8jXX09vZRXPbJN58fQ/fWLee7U8/RyabprUlTj4tOWMWNy9bRHPaozntcfOyRSw5YxYArS05Mtk0259+jm+sW8+br++huW0SvZ1dLF9zPatuuYFSfwF1mpzXqGmPE6Lj/xOlKBUKzL/4Qq5at5bezi6yzc3s3f0a3/n87fR3d5PN57CRBq2Jwoj5s6agraFcDSlXQ7Q1zJ81hSiMQGtspMnmc/R3d/Odz9/O3t2vkW1uprezi6vWrWX+xRdSKhQQpRqk3jauAcZo0pkM13zm0/Gq0ffo7+nh7i/fQalQIJ1OEQUBWmvCMPYAP355L5Uwoi2XoS2XoRJG/PjlvTgCYRihtSYKAtLpFKVCgbu/fAf9PT14voe1lms+82nSmQzGNO4aGxKAchzKhQEWrriMsxefz+BAES+VYsPd93P00GHSmTRRGGG1QUeaahBgtObV3xzkCw9tZMtrv2LLa7/iCw9t5NXfHMTouIyONFYbojAinUlz9NBhNtx9P14qxeBAkbMXn8/CFZdRLgw0PBUaCoWtMXjpFEuuXE5QqZLJ5di9/SW2/vBZsvkcURBircEajQaqgWEAIO3z3K49bNm9F4AwMlgsA5WAahCitY2XGgJREJLN59j6w2e5aOXlzFt0HkGlypIrl7Ptiaew41gADcW4NUBEiIKA9hnTmfO++QSVCspRbN38bEyUTRKIJj5Wo40hCCPKlSp9xTKVapXBSvxUqvG3cqVKEEZok6wIja23Y41h6+ZnUY4iqFSY8775tM+YThQEY06DTYwAlKJaqXLOhQvJtjajlKK78wiv7vw5fsrHaI2tMWLjtFWUqHhpsELfQImeQpGeQpG+gRKlwQrVICDSOt5YSRKp1hiM1vgpn1d3/pzuziMopci2NnPOhQupVqrIKPOGI6HhKdAxeyaiFK7n0XXgIIXefnzfwYTRMS1IHmMsxhg0hhCOpZillsNToBSijq9njcHxXAq9/XQdOEjrgnMRpeiYPbPxKTBSJnk0j7EWx/eZOXcOURjiuA77f7mPKKgiyPEMxHuP8XsyHaJIE4XJE+ljam9t0sfxQhCEKKiy/5f7cFyHKAyZOXcOju9j6nXG/jScD3C8OAcnIpQHiiNHaDXGhtoFY6G2jWVUnBpQcRmplZMTm7GUB4r1OV/ruxGMKyOUkMP4604kxrGDMgQNa4AOw5gMa8nkcyNbZJH4XIZIfAalvg5OjJeS+EnKxOdUh7cjImTyubqW1fpuBA27wbf27MP1PHSkmX3mHLxUKp6/cSYTRKj9xYJQCAoRQZzkEUFQICOUT9qwWLxUitlnzkFHGtfzeGvPvt+dG4TYFXbuP4A1ligM6Zg1g3xrCzrSiErmtRxjRJTE35VClINI8ihnyPdjTMfCiPvRkSbf2kLHrBlEYYg1ls79BxpygQ0JwBpDKp3i9Rd2UurrxxjD5KlTmLfwAwTVIA5RJdmrk9qIHmOwLoSE+ZqAYg2R4+oqxyGoBsxb+AEmT52CMYZSXz+vv7CTVDrVkCts2A0eOXiIfS/vxk+nMdqwdMUyRDnJqCcjW9MAUce+OQ44Cpz4PRaCk5RJpkjyDRFEOSxdsQyjDX46zb6Xd3Pk4KGG3WDDUyCsVNm6cTN+OkW5WGT+4vNYesWllAaKuL4bM+M4w4TAEA1gJOad+Lvru5QGiiy94lLmLz6PcrGIn06xdeNmwgajQAA1btFZsJEmk8+zY9MzvLHjJZryOcJqldW33kj79GlUBquxr1ZDRzlRf1HH5n3yXv8tYd7xPCqDVdqnT2P1rTcSVqs05XO8seMldmx6hkw+H+cZGuChdpFgXLDE+/fVcpmH7/wuSoQgCGlpa+PWr32RbHOeaqVaT3mL46CGMCknvKshzLu+T7VSJduc59avfZGWtjaCIESJ8PCd36VaLsd7j+MlPmEhOSIz/maM0WSa87zy/DYeu+te2qZ2UCoUOPPcc/jst26jpX0yxcIAjufieB7iujHDIz1uXMbxXIqFAVraJ/PZb93GmeeeQ6lQoG1qB4/ddS+vPL+NTHO+wYSIBRDJtUwdGMtJsZOhlhRd89W/4YpPXldPjfV39/D9ex5g29PPYnREKpXCqdmEoeRYi9aaarWKclyWfPgyPnHLDbRMbqNUKDBpagc/fOh7PHjbtyYsKWotRcm1dmwRURcl58saCoxqafEbbv8CKz/1J/R0duF6Hn46VU+UvPrizxno7SMMguO2wD3fJz+plXmLPsDSKy5j/gXnE1SqRGFI29QONv3rv/PAV+6YqLS4QURZa/5bcq0d3xZRf02DdwQsoEQw1hJUqnzs1rVcve4mMPECJpPPoZw4Z9B14CC/+eU+BoslAJpyWX7vzDl0zJoR+3lt6nVQwuN33ctjd9+Hn07V+2jwaJtGxLHW/L3kWtsvAeeZhPmGj8zVt8b6C5x78RJWf/YWzl58PkG1SjBYQYng+h6Oe+ykqbUWHUVEQYixFr8pjZ9K8caOl9hw5z288vw2si0TujVmAQ16mQCSa+3YJqIW23gaTEjCfejm6KIVy1j60RWc8f75ZFua49A2DIfmQ3A8D2sMpf4Ce/9nN1ufeIoXn3rm7dgc1RKr/45iX9cSAci1TLlWlLshvic0cWcGlONgtKZcGIi3x2dO5w8uXEjH7FnMOusMXDfuKooiDvxiL137D/DaCzs5+taheHu8OV9vYwIR3x8y0epi/5GHheQGVa516lMisny0t0bGgqEHJIJKFWsMru8x9IREFISIUvhv7wGJSERca+3mYl/nCsCpX5rKZKZ0KN/ZhdDRqEE8GerxPcPnct0emOFnhCYIGhEHS5cJ9IJy+Uj90pQBKJePHNbGrsLaXhEcsNFEZ3ystRgdHcsYD3mM1hgdvQ3MW8BGIjhY26uNXVUuHzmc/GiGXZxsap682FHu4wjTk1skkKjKuwmJGOPLkfHIH9Imunqw0D3ixckaYiE0TZ6hUs59IpJcnbW1xt5lV2frbnaTqeq1g4Pdp7w6W0N9WmQntV8HzjqsvVhEpJbafkcjySJZay0iz4O+q9R7dNSXp4d+r1+fz7W2X2JRV1prPwQyX96h1+etpQB2t4j8RDAbi31HT3t9/n8B+y8rhJyWqMIAAAAASUVORK5CYII=">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="app" id="app" data-view="controls">
+  <!-- identity, the three workspaces (LIVE · MAP · DIAGNOSE, D4), the CT's live state -->
+  <header class="topbar">
+    <div class="wordmark">CTserver</div>
+    <nav class="views" role="tablist" aria-label="Workspace">
+      <button role="tab" class="view-tab on" data-view="controls" aria-selected="true">Live</button>
+      <button role="tab" class="view-tab" data-view="customize" aria-selected="false">Map</button>
+      <button role="tab" class="view-tab" data-view="status" aria-selected="false">Diagnose</button>
+    </nav>
+    <button class="pill" id="pill" title="The CT right now. Click for Diagnose."><i class="dot"></i><span id="pill-state">Connecting</span><span class="pill-sub" id="pill-sub"></span></button>
+    <div class="top-right">
+      <span class="saved" id="saved" aria-live="polite"></span>
+      <span class="chip" id="chip-port"><i class="dot"></i><span>CT</span></span>
+      <span class="chip" id="chip-td"><i class="dot"></i><span>TD</span></span>
+      <span class="ver" id="ver" title="The running build"></span>
+    </div>
+  </header>
+
+  <!-- the profile switcher: which app the CT is on, and which of its pages -->
+  <nav class="profilebar" aria-label="App, profile and page">
+    <div class="prow">
+      <span class="plabel">App</span>
+      <div class="app-picker" id="apptabs"></div>
+    </div>
+    <div class="prow">
+      <span class="plabel">Profile</span>
+      <div id="profile-picker" class="profile-picker-row" aria-label="Profile and linked project"></div>
+    </div>
+    <div class="prow">
+      <span class="plabel">Page</span>
+      <div class="pgtabs" id="pgtabs" role="tablist" aria-label="Page"></div>
+    </div>
+    <div class="editor-toolbar ptools">
+      <div class="editor-tools" role="group" aria-label="Editing and history">
+        <button class="act bar" id="learnbtn" title="Press a control on the CT to pick it here">Learn</button>
+        <button class="act bar" id="undobtn" title="Undo the last change (Ctrl+Z)" disabled>Undo</button>
+        <button class="act bar" id="redobtn" title="Redo (Ctrl+Y)" disabled>Redo</button>
+        <button class="act bar" id="filebtn" title="Edit this profile's JSON file">File</button>
+      </div>
+      <span class="editor-save" id="editor-saved" role="status">Autosave on · edits save to the profile</span>
+      <div class="device-tools" role="group" aria-label="Device activation">
+        <span id="device-selection" class="editor-save" title="Activation selects a profile and page on the CT. Edits to the active profile save automatically."></span>
+        <button class="act bar primary" id="activatebtn" title="Select this profile and page on the CT. Profile edits save automatically.">Activate on CT</button>
+        <button class="act bar" id="escbtn" title="Back to MAIN, stuck keys released (same as holding round 1)">Escape</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="body">
+    <!-- BUTTONS: the CT in the centre, the actions library on the right -->
+    <section class="v-buttons" id="v-buttons">
+      <div class="stage">
+        <div class="context-heading"><span id="editing-target"></span><span id="live-target"></span></div>
+        <div class="alert compact" id="banner" hidden></div>
+        <div class="gen-note" id="gen-note" hidden></div>
+        <div class="ct" id="ct" aria-label="The CT: click a control to edit it, or drop an action on it">
+          <div class="ct-top">
+            <div class="ct-col" data-display="left" title="Left knob displays: labels and available live values appear on the corresponding knobs"><button class="c dial" data-k="knobTL"></button><button class="c dial" data-k="knobCL"></button><button class="c dial" data-k="knobBL"></button></div>
+            <div class="keys" id="keys"></div>
+            <div class="ct-col" data-display="right" title="Right knob displays: labels and available live values appear on the corresponding knobs"><button class="c dial" data-k="knobTR"></button><button class="c dial" data-k="knobCR"></button><button class="c dial" data-k="knobBR"></button></div>
+          </div>
+          <div class="round" id="round"></div>
+          <div class="ct-bottom">
+            <div class="sq" id="sqL"></div>
+            <button class="c wheel" data-k="knobCT"></button>
+            <div class="sq" id="sqR"></div>
+          </div>
+        </div>
+        <div class="legend"><span><i class="lg mapped"></i>mapped</span><span><i class="lg free"></i>free</span><span><i class="lg sel"></i>selected</span><span><i class="lg shared"></i>on every page</span><span class="hint" id="stage-hint"></span>
+          <span class="test-meta" id="test-meta" hidden><span id="test-last"></span><span id="test-count"></span><span class="meter"><i id="test-meter"></i></span></span>
+
+        </div>
+      </div>
+
+      <aside class="side" aria-label="Inspector and actions">
+        <div class="insp" id="insp">
+          <div class="insp-empty" id="insp-empty" hidden></div>
+          <div id="insp-body" hidden>
+            <div class="insp-head"><span class="insp-title" id="insp-title"></span><button class="x" id="insp-close" title="Deselect (Esc)" aria-label="Deselect">×</button></div>
+            <div class="seg" id="trig" role="tablist" aria-label="Trigger"></div>
+            <div class="bound" id="bound"></div>
+            <div class="fields" id="fields"></div>
+          </div>
+        </div>
+        <div class="lib">
+          <div class="lib-head"><input id="q" type="search" placeholder="Search actions" aria-label="Search actions" autocomplete="off"><div id="action-scopes" class="action-scopes" role="group" aria-label="Action app"></div></div>
+          <div class="lib-list" id="lib"></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- STATUS: the CT's health, who holds it, the fixes, the logs -->
+    <section class="v-status" id="v-status" hidden>
+      <div class="col-left">
+        <section class="panel" id="p-status" aria-labelledby="h-status">
+          <div class="ph"><h2 id="h-status">CT</h2>          <button class="act bar" id="testbtn" title="Take the CT alone and light each control as you touch it; sends nothing to TD">Input test</button><span class="aside" id="status-aside"></span></div>
+          <div class="hero st-free" id="hero">
+            <div class="glyph" aria-hidden="true">
+              <svg viewBox="0 0 92 116">
+                <rect class="body-outline" x="1" y="1" width="90" height="114" rx="10"/>
+                <circle class="part" cx="12" cy="14" r="5"/><circle class="part" cx="12" cy="29" r="5"/><circle class="part" cx="12" cy="44" r="5"/>
+                <circle class="part" cx="80" cy="14" r="5"/><circle class="part" cx="80" cy="29" r="5"/><circle class="part" cx="80" cy="44" r="5"/>
+                <rect class="part" x="21" y="8" width="3" height="42" rx="1.5"/><rect class="part" x="68" y="8" width="3" height="42" rx="1.5"/>
+                <rect class="part" x="28" y="8" width="36" height="42" rx="2"/>
+                <path class="part" d="M37 8v42M46 8v42M55 8v42M28 22h36M28 36h36"/>
+                <g class="part"><circle cx="13" cy="60" r="2.6"/><circle cx="23" cy="60" r="2.6"/><circle cx="33" cy="60" r="2.6"/><circle cx="41" cy="60" r="2.6"/><circle cx="51" cy="60" r="2.6"/><circle cx="59" cy="60" r="2.6"/><circle cx="69" cy="60" r="2.6"/><circle cx="79" cy="60" r="2.6"/></g>
+                <circle class="wheel-g" cx="46" cy="88" r="17"/>
+                <circle class="led" cx="46" cy="88" r="5"/>
+                <g class="part"><rect x="6" y="73" width="7" height="6" rx="1"/><rect x="16" y="73" width="7" height="6" rx="1"/><rect x="6" y="84" width="7" height="6" rx="1"/><rect x="16" y="84" width="7" height="6" rx="1"/><rect x="6" y="95" width="7" height="6" rx="1"/><rect x="16" y="95" width="7" height="6" rx="1"/>
+                  <rect x="69" y="73" width="7" height="6" rx="1"/><rect x="79" y="73" width="7" height="6" rx="1"/><rect x="69" y="84" width="7" height="6" rx="1"/><rect x="79" y="84" width="7" height="6" rx="1"/><rect x="69" y="95" width="7" height="6" rx="1"/><rect x="79" y="95" width="7" height="6" rx="1"/></g>
+              </svg>
+            </div>
+            <div>
+              <h1 class="state" id="state" aria-live="polite">Connecting</h1>
+              <div class="owner-line" id="owner-line"></div>
+            </div>
+          </div>
+          <div class="facts">
+            <div class="fact"><div class="k">Port</div><div class="v" id="f-port">-</div></div>
+            <div class="fact"><div class="k">Held since</div><div class="v" id="f-since">-</div></div>
+            <div class="fact"><div class="k">Last input</div><div class="v" id="f-input">-</div></div>
+          </div>
+          <div class="alerts" id="alerts" role="alert"></div>
+          <div class="guide" id="guide" hidden aria-live="polite">
+            <div class="gh"><span class="gt">Guided replug</span><span class="count" id="fixcount"></span><button class="act sm" id="fixstop">Stop</button></div>
+            <ol id="fixsteps"></ol>
+          </div>
+        </section>
+
+        <section class="panel" id="p-owner" aria-labelledby="h-owner">
+          <div class="ph"><h2 id="h-owner">Who holds the CT</h2><span class="aside">one owner at a time</span></div>
+          <div class="tiles" role="group" aria-label="Hand the CT to">
+            <button class="tile" data-to="waxyct" aria-pressed="false"><span class="t-dot"></span><span class="t-name">waxyct</span><span class="t-sub"></span></button>
+            <button class="tile" data-to="td" aria-pressed="false"><span class="t-dot"></span><span class="t-name">TD bridge</span><span class="t-sub"></span></button>
+            <button hidden class="tile" data-to="edena" aria-pressed="false"><span class="t-dot"></span><span class="t-name">EDENA</span><span class="t-sub"></span></button>
+            <button class="tile" data-to="none" aria-pressed="false"><span class="t-dot"></span><span class="t-name">Nobody</span><span class="t-sub"></span></button>
+          </div>
+          <ol class="steps" id="steps" aria-live="polite"></ol>
+        </section>
+      </div>
+
+      <div class="col-right">
+        <section class="panel" id="p-health" aria-labelledby="h-health">
+          <div class="ph"><h2 id="h-health">Health</h2><span class="aside" id="health-aside"></span><button class="act sm" id="fixbtn">Start guided replug</button></div>
+          <ul class="checks" id="checks"></ul>
+        </section>
+        <section class="panel" id="p-console" aria-labelledby="h-console">
+          <div class="ph"><h2 id="h-console">Console</h2>
+            <div class="seg small" id="filters" role="group" aria-label="Show"></div>
+            <button class="act sm" id="copybtn" title="Copy the lines shown">Copy</button>
+          </div>
+          <div class="log" id="log" aria-live="off"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hud">
+    <span class="live" id="hud-live"><i></i><span>live</span></span>
+    <span class="msg" id="hud-msg"></span>
+    <span class="dim" id="hud-ver"></span>
+    <span id="shortcuts" class="shortcuts"><span title="Hold these physical CT buttons while turning a knob or the wheel"><kbd>CT Keyboard</kbd> Fine <kbd>Fn</kbd> Fast</span><kbd>/</kbd> Search <kbd>Ctrl Z / Y</kbd> Undo / Redo <kbd>Esc</kbd> Cancel <span id="shortcut-clear" hidden><kbd>Del</kbd> Clear</span></span>
+  </footer>
+</div>
+
+<!-- the drop-on-a-bound-control choice -->
+<div class="pop" id="pop" hidden role="dialog" aria-label="This control is already bound">
+  <div class="pop-t" id="pop-t"></div>
+  <div class="pop-acts"><button class="act sm primary" id="pop-replace">Replace</button><button class="act sm" id="pop-hold" hidden>Put on hold</button><button class="act sm" id="pop-cancel">Cancel</button></div>
+</div>
+
+<!-- toasts: saved, undo -->
+<div class="toast" id="toast" hidden role="status"><span id="toast-t"></span><button class="act sm" id="toast-undo">Undo</button></div>
+
+<!-- the whole JSON file, for anything the editor does not cover -->
+<dialog id="filedlg">
+  <div class="dh-plain"><span id="file-title">Profile file</span><button class="x" id="file-close" aria-label="Close">×</button></div>
+  <textarea id="file-text" spellcheck="false" aria-label="Profile JSON"></textarea>
+  <div class="acts"><span class="ed-msg" id="file-msg"></span><button class="act sm" id="file-folder">Open folder</button><button class="act sm" id="file-reload">Reload from disk</button><button class="act sm primary" id="file-save">Check and save</button></div>
+</dialog>
+
+<dialog id="confirm">
+  <div class="dh" id="confirm-title">Force stop</div>
+  <p id="confirm-text"></p>
+  <div class="acts"><button class="act" id="confirm-no">Cancel</button><button class="act danger" id="confirm-yes">Force stop</button></div>
+</dialog>
+
+<script type="module">
+// host/schema.mjs first (the one list of controls, colours, actions and TD verbs), then the page's scripts in order
+import * as SCHEMA from '../host/schema.mjs'
+import { iconSvg } from './icon-model.mjs'
+import { importSvg } from './icon-import.mjs'
+import * as EditorModel from './editor-model.mjs'
+import * as ControlFeedbackView from './control-feedback-view.mjs'
+window.ControlFeedbackView = ControlFeedbackView
+window.EditorModel = EditorModel
+window.SCHEMA = SCHEMA
+window.ICON_TOOLS = { iconSvg, importSvg }
+for (const f of ['actions.js', 'icon-library.js', 'profile-picker.js', 'app.js']) await new Promise((ok, no) => { const s = document.createElement('script'); s.src = f; s.onload = ok; s.onerror = no; document.body.appendChild(s) })
+</script>
+</body>
+</html>

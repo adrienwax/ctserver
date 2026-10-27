@@ -1,0 +1,18 @@
+{
+  "name": "ct-td-control",
+  "version": "0.1.0",
+  "description": "RAWK: drive the TouchDesigner TEST layout from a Loupedeck CT instead of the Traktor X1. Design + scaffold; not yet run live.",
+  "type": "module",
+  "main": "bridge.mjs",
+  "scripts": {
+    "map": "node bridge.mjs --print-map",
+    "selftest": "node bridge.mjs --selftest",
+    "live": "node bridge.mjs --live",
+    "dry": "node bridge.mjs --live --dry"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "loupedeck": "^7.0.3",
+    "serialport": "^12.0.0"
+  }
+}

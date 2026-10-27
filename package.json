@@ -1,0 +1,71 @@
+{
+  "name": "waxyct",
+  "version": "3.1.0-alpha.8-codex.9",
+  "private": true,
+  "description": "One small panel for the Loupedeck CT: its state at a glance, a clean hand-off between the TD bridge and EDENA, and a guided fix for the quiet state.",
+  "type": "module",
+  "main": "electron/main.mjs",
+  "scripts": {
+    "test": "node scripts/run-offline.mjs test",
+    "start": "node router.mjs --open",
+    "serve": "node router.mjs",
+    "package": "node scripts/package.mjs",
+    "icon": "python scripts/make-icon.py",
+    "setup:bridge": "npm ci --prefix integrations/ct-td-control",
+    "test:persistence": "node scripts/run-offline.mjs persistence",
+    "package:check": "node scripts/package.mjs --check",
+    "package:plan": "node scripts/package.mjs --plan",
+    "setup:electron": "node node_modules/electron/install.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "build": {
+    "appId": "local.waxyct",
+    "productName": "waxyct",
+    "asar": false,
+    "files": [
+      "electron/**",
+      "router.mjs",
+      "host/**",
+      "ui/**",
+      "config/**",
+      "scripts/park-config.mjs",
+      "!config/.lastgood/**",
+      "!config/_backup-*/**",
+      "!config/.history/**",
+      "waxyct.ico",
+      "package.json",
+      "build-info.json",
+      "!config/.shipped/**",
+      "!config/.updates/**",
+      "!config/.upgrade-history/**",
+      "!config/.generated/**"
+    ],
+    "extraResources": [
+      {
+        "from": "build/ct",
+        "to": "ct",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "waxyct.ico"
+    },
+    "portable": {
+      "artifactName": "waxyct-${version}.exe"
+    },
+    "npmRebuild": false,
+    "electronVersion": "43.6.0"
+  },
+  "devDependencies": {
+    "electron": "43.6.0",
+    "electron-builder": "26.15.3"
+  },
+  "license": "MIT"
+}

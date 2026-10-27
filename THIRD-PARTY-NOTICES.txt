@@ -1,0 +1,178 @@
+THIRD-PARTY NOTICES — LOCAL PREPARATION
+
+Original project code is MIT, copyright 2026 ak wax. These dependency licences remain separate.
+Licence texts below were copied verbatim from version-matching local packages.
+This collection is not yet a complete distribution notice set. See third-party/NOTICE-MANIFEST.json.
+
+@serialport/binding-mock 10.2.2 — MIT
+  third-party/licenses/_serialport_binding-mock-10.2.2/LICENSE
+@serialport/bindings-cpp 12.0.1 — MIT
+  third-party/licenses/_serialport_bindings-cpp-12.0.1/LICENSE
+@serialport/parser-delimiter 11.0.0 — MIT
+  third-party/licenses/_serialport_parser-delimiter-11.0.0/LICENSE
+@serialport/parser-readline 11.0.0 — MIT
+  third-party/licenses/_serialport_parser-readline-11.0.0/LICENSE
+node-addon-api 7.0.0 — MIT
+  third-party/licenses/node-addon-api-7.0.0/LICENSE.md
+@serialport/bindings-interface 1.2.2 — MIT
+  third-party/licenses/_serialport_bindings-interface-1.2.2/LICENSE
+@serialport/parser-byte-length 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-byte-length-12.0.0/LICENSE
+@serialport/parser-cctalk 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-cctalk-12.0.0/LICENSE
+@serialport/parser-delimiter 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-delimiter-12.0.0/LICENSE
+@serialport/parser-inter-byte-timeout 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-inter-byte-timeout-12.0.0/LICENSE
+@serialport/parser-packet-length 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-packet-length-12.0.0/LICENSE
+@serialport/parser-readline 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-readline-12.0.0/LICENSE
+@serialport/parser-ready 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-ready-12.0.0/LICENSE
+@serialport/parser-regex 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-regex-12.0.0/LICENSE
+@serialport/parser-slip-encoder 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-slip-encoder-12.0.0/LICENSE
+@serialport/parser-spacepacket 12.0.0 — MIT
+  third-party/licenses/_serialport_parser-spacepacket-12.0.0/LICENSE
+@serialport/stream 12.0.0 — MIT
+  third-party/licenses/_serialport_stream-12.0.0/LICENSE
+base64-js 1.5.1 — MIT
+  third-party/licenses/base64-js-1.5.1/LICENSE
+bl 4.1.0 — MIT
+  third-party/licenses/bl-4.1.0/LICENSE.md
+buffer 5.7.1 — MIT
+  third-party/licenses/buffer-5.7.1/LICENSE
+canvas 3.2.3 — MIT
+  third-party/licenses/canvas-3.2.3/Readme.md
+  third-party/licenses/canvas-3.2.3/src/bmp/LICENSE.md
+chownr 1.1.4 — ISC
+  third-party/licenses/chownr-1.1.4/LICENSE
+color-name 2.1.1 — MIT
+  third-party/licenses/color-name-2.1.1/LICENSE
+color-parse 2.1.2 — MIT
+  third-party/licenses/color-parse-2.1.2/LICENSE
+color-rgba 3.1.1 — MIT
+  third-party/licenses/color-rgba-3.1.1/LICENSE
+color-space 3.1.0 — CC0-1.0
+  third-party/licenses/color-space-3.1.0/license.md
+debug 4.3.4 — MIT
+  third-party/licenses/debug-4.3.4/LICENSE
+decompress-response 6.0.0 — MIT
+  third-party/licenses/decompress-response-6.0.0/license
+deep-extend 0.6.0 — MIT
+  third-party/licenses/deep-extend-0.6.0/LICENSE
+detect-libc 2.1.2 — Apache-2.0
+  third-party/licenses/detect-libc-2.1.2/LICENSE
+end-of-stream 1.4.5 — MIT
+  third-party/licenses/end-of-stream-1.4.5/LICENSE
+expand-template 2.0.3 — (MIT OR WTFPL)
+  third-party/licenses/expand-template-2.0.3/LICENSE
+fs-constants 1.0.0 — MIT
+  third-party/licenses/fs-constants-1.0.0/LICENSE
+github-from-package 0.0.0 — MIT
+  third-party/licenses/github-from-package-0.0.0/LICENSE
+ieee754 1.2.1 — BSD-3-Clause
+  third-party/licenses/ieee754-1.2.1/LICENSE
+inherits 2.0.4 — ISC
+  third-party/licenses/inherits-2.0.4/LICENSE
+ini 1.3.8 — ISC
+  third-party/licenses/ini-1.3.8/LICENSE
+loupedeck 7.0.3 — MIT
+  third-party/licenses/loupedeck-7.0.3/LICENSE
+@serialport/bindings-cpp 13.0.0 — MIT
+  third-party/licenses/_serialport_bindings-cpp-13.0.0/LICENSE
+@serialport/parser-byte-length 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-byte-length-13.0.0/LICENSE
+@serialport/parser-cctalk 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-cctalk-13.0.0/LICENSE
+@serialport/parser-delimiter 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-delimiter-13.0.0/LICENSE
+@serialport/parser-inter-byte-timeout 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-inter-byte-timeout-13.0.0/LICENSE
+@serialport/parser-packet-length 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-packet-length-13.0.0/LICENSE
+@serialport/parser-ready 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-ready-13.0.0/LICENSE
+@serialport/parser-regex 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-regex-13.0.0/LICENSE
+@serialport/parser-slip-encoder 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-slip-encoder-13.0.0/LICENSE
+@serialport/parser-spacepacket 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-spacepacket-13.0.0/LICENSE
+@serialport/stream 13.0.0 — MIT
+  third-party/licenses/_serialport_stream-13.0.0/LICENSE
+debug 4.4.0 — MIT
+  third-party/licenses/debug-4.4.0/LICENSE
+ms 2.1.3 — MIT
+  third-party/licenses/ms-2.1.3/license.md
+node-addon-api 8.3.0 — MIT
+  third-party/licenses/node-addon-api-8.3.0/LICENSE.md
+node-gyp-build 4.8.4 — MIT
+  third-party/licenses/node-gyp-build-4.8.4/LICENSE
+serialport 13.0.0 — MIT
+  third-party/licenses/serialport-13.0.0/LICENSE
+@serialport/parser-readline 13.0.0 — MIT
+  third-party/licenses/_serialport_parser-readline-13.0.0/LICENSE
+mimic-response 3.1.0 — MIT
+  third-party/licenses/mimic-response-3.1.0/license
+minimist 1.2.8 — MIT
+  third-party/licenses/minimist-1.2.8/LICENSE
+mkdirp-classic 0.5.3 — MIT
+  third-party/licenses/mkdirp-classic-0.5.3/LICENSE
+ms 2.1.2 — MIT
+  third-party/licenses/ms-2.1.2/license.md
+napi-build-utils 2.0.0 — MIT
+  third-party/licenses/napi-build-utils-2.0.0/LICENSE
+node-abi 3.96.0 — MIT
+  third-party/licenses/node-abi-3.96.0/LICENSE
+node-addon-api 7.1.1 — MIT
+  third-party/licenses/node-addon-api-7.1.1/LICENSE.md
+node-gyp-build 4.6.0 — MIT
+  third-party/licenses/node-gyp-build-4.6.0/LICENSE
+once 1.4.0 — ISC
+  third-party/licenses/once-1.4.0/LICENSE
+prebuild-install 7.1.3 — MIT
+  third-party/licenses/prebuild-install-7.1.3/LICENSE
+pump 3.0.4 — MIT
+  third-party/licenses/pump-3.0.4/LICENSE
+rc 1.2.8 — (BSD-2-Clause OR MIT OR Apache-2.0)
+  third-party/licenses/rc-1.2.8/LICENSE.APACHE2
+  third-party/licenses/rc-1.2.8/LICENSE.BSD
+  third-party/licenses/rc-1.2.8/LICENSE.MIT
+readable-stream 3.6.2 — MIT
+  third-party/licenses/readable-stream-3.6.2/LICENSE
+safe-buffer 5.2.1 — MIT
+  third-party/licenses/safe-buffer-5.2.1/LICENSE
+semver 7.8.5 — ISC
+  third-party/licenses/semver-7.8.5/LICENSE
+serialport 12.0.0 — MIT
+  third-party/licenses/serialport-12.0.0/LICENSE
+simple-concat 1.0.1 — MIT
+  third-party/licenses/simple-concat-1.0.1/LICENSE
+simple-get 4.0.1 — MIT
+  third-party/licenses/simple-get-4.0.1/LICENSE
+strict-event-emitter 0.5.1 — MIT
+string_decoder 1.3.0 — MIT
+  third-party/licenses/string_decoder-1.3.0/LICENSE
+strip-json-comments 2.0.1 — MIT
+  third-party/licenses/strip-json-comments-2.0.1/license
+tar-fs 2.1.5 — MIT
+  third-party/licenses/tar-fs-2.1.5/LICENSE
+tar-stream 2.2.0 — MIT
+  third-party/licenses/tar-stream-2.2.0/LICENSE
+tunnel-agent 0.6.0 — Apache-2.0
+  third-party/licenses/tunnel-agent-0.6.0/LICENSE
+util-deprecate 1.0.2 — MIT
+  third-party/licenses/util-deprecate-1.0.2/LICENSE
+wrappy 1.0.2 — ISC
+  third-party/licenses/wrappy-1.0.2/LICENSE
+ws 8.22.0 — MIT
+  third-party/licenses/ws-8.22.0/LICENSE
+electron-runtime 43.6.0 — see runtime notices
+  third-party/electron-43.6.0/LICENSE.electron.txt
+  third-party/electron-43.6.0/LICENSES.chromium.html
+
+OPEN GATES:
+Confirm native/prebuilt library provenance and final packaged contents before distributing binaries.

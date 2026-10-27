@@ -1,0 +1,133 @@
+{
+ "_source": "RAWK site-v2/data/x1-td_v1.5-test.js, targets_by_side (the X1 TEST layout knob names), copied 27 Sep. Unused* shows as a dash.",
+ "web": [
+  "Wobble",
+  "Scale",
+  "Width"
+ ],
+ "spectrum": [
+  "Gain",
+  "Trail",
+  "Scroll"
+ ],
+ "inbetween": [
+  "Speed",
+  "Warp",
+  "Light"
+ ],
+ "reaction": [
+  "Feed",
+  "Kill",
+  "Steps"
+ ],
+ "neon": [
+  "Band",
+  "Scale",
+  "Speed"
+ ],
+ "reeflight": [
+  "Speed",
+  "Elevation",
+  "Gloss"
+ ],
+ "physarum": [
+  "Angle",
+  "Reach",
+  "Decay"
+ ],
+ "particles": [
+  "Speed",
+  "Field",
+  "Trail"
+ ],
+ "deepreef": [
+  "Speed",
+  "Unused1",
+  "Unused2"
+ ],
+ "shore": [
+  "Swell",
+  "Chop",
+  "Lines"
+ ],
+ "plankton": [
+  "Drift",
+  "Spread",
+  "Size"
+ ],
+ "haze": [
+  "Depth",
+  "Blur",
+  "Lift"
+ ],
+ "pixsort": [
+  "Threshold",
+  "Length",
+  "Angle"
+ ],
+ "silhouette": [
+  "Threshold",
+  "Trail",
+  "Drift"
+ ],
+ "reveal": [
+  "Reveal",
+  "Tiles",
+  "Gap"
+ ],
+ "timeslice": [
+  "Spread",
+  "Direction",
+  "Soft"
+ ],
+ "dreamfb": [
+  "Feedback",
+  "Warp",
+  "Drift"
+ ],
+ "swirl": [
+  "Length",
+  "Spin",
+  "Hue"
+ ],
+ "timeblock": [
+  "Depth",
+  "Tiltx",
+  "Tilty"
+ ],
+ "depthtime": [
+  "Spread",
+  "Direction",
+  "Soft"
+ ],
+ "paint": [
+  "Strength",
+  "Keep",
+  "Soft"
+ ],
+ "relight": [
+  "Height",
+  "Orbit",
+  "Ambient"
+ ],
+ "mosh": [
+  "Amount",
+  "Hold",
+  "Force"
+ ],
+ "marble": [
+  "Flow",
+  "Keep",
+  "Swirl"
+ ],
+ "refract": [
+  "Strength",
+  "Soft",
+  "Tint"
+ ],
+ "look": [
+  "FX mix",
+  "Ceiling",
+  "Knee"
+ ]
+}

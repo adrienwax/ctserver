@@ -1,0 +1,2 @@
+# Preserve snapshot bytes so SOURCE-SNAPSHOT.json remains verifiable on any checkout.
+* -text

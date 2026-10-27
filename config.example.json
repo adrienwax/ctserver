@@ -1,0 +1,8 @@
+{
+  "_comment": "Optional router overrides. Copy to config.json only if needed; relative paths resolve against this folder. The legacy EDENA integration is not required. Keep personal launch settings private.",
+  "port": 9990,
+  "bridgeDir": "integrations/ct-td-control",
+  "bridgeArgs": [
+    "--live"
+  ]
+}

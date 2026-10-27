@@ -1,0 +1,170 @@
+{
+  "_help": "Global Home. Apps browses supported tools; only OPEN activates one. Project/Profile/Page choices need Open/Use/Enter. Wheel browses; press selects only. Six Home dials: volume, apps, profiles, scroll, pages, projects. Browse/push selects only; OPEN/USE/ENTER still confirms activation. HOVER SCROLL: point at the intended pane first; clockwise scrolls down. It is a Windows pointer-wheel action, not a guarantee of scrolling the focused app.",
+  "name": "Home",
+  "color": "cyan",
+  "stripGestures": false,
+  "pages": [
+    {
+      "name": "Home",
+      "keys": {
+        "0": {
+          "label": "MOSHPIT",
+          "icon": "mosh",
+          "color": "coral",
+          "do": {
+            "app": "moshpit"
+          }
+        },
+        "1": {
+          "label": "TD SETUP",
+          "icon": "node",
+          "color": "cyan",
+          "do": {
+            "home": "setup"
+          }
+        },
+        "2": {
+          "label": "PROJECT",
+          "icon": "clip",
+          "color": "cyan",
+          "do": {
+            "home": "projects"
+          }
+        },
+        "3": {
+          "label": "FILES",
+          "icon": "folder",
+          "color": "sand",
+          "do": {
+            "launch": "explorer.exe"
+          }
+        },
+        "4": {
+          "label": "PROFILES",
+          "icon": "layers",
+          "color": "cyan",
+          "do": {
+            "home": "profiles"
+          }
+        },
+        "5": {
+          "label": "PAGES",
+          "icon": "tasks",
+          "color": "cyan",
+          "do": {
+            "home": "pages"
+          }
+        },
+        "6": {
+          "label": "GUIDES",
+          "icon": "layers",
+          "color": "sand",
+          "do": {
+            "home": "guides"
+          }
+        },
+        "7": {
+          "label": "SETUP",
+          "icon": "settings",
+          "color": "sand",
+          "do": {
+            "home": "setup"
+          }
+        },
+        "8": {
+          "label": "DEVICE",
+          "icon": "desktop",
+          "color": "sand",
+          "do": {
+            "home": "device"
+          }
+        },
+        "9": {
+          "label": "APPS",
+          "icon": "layers",
+          "color": "cyan",
+          "do": {
+            "home": "apps"
+          }
+        },
+        "10": {
+          "label": "WINDOWS",
+          "icon": "desktop",
+          "color": "sage",
+          "do": {
+            "app": "windows"
+          }
+        },
+        "11": {
+          "label": "SPOTIFY",
+          "icon": "volume",
+          "color": "green",
+          "sub": "",
+          "do": {
+            "app": "spotify"
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "VOLUME",
+          "turn": {
+            "volume": 1
+          },
+          "press": {
+            "media": "mute"
+          }
+        },
+        "TR": {
+          "name": "SCROLL",
+          "turn": {
+            "scroll": -1
+          }
+        },
+        "CL": {
+          "name": "APPS",
+          "turn": {
+            "home": "browse-apps"
+          },
+          "press": {
+            "home": "pick-apps"
+          }
+        },
+        "BL": {
+          "name": "PROFILES",
+          "turn": {
+            "home": "browse-profiles"
+          },
+          "press": {
+            "home": "pick-profiles"
+          }
+        },
+        "CR": {
+          "name": "PAGES",
+          "turn": {
+            "home": "browse-pages"
+          },
+          "press": {
+            "home": "pick-pages"
+          }
+        },
+        "BR": {
+          "name": "PROJECTS",
+          "turn": {
+            "home": "browse-projects"
+          },
+          "press": {
+            "home": "pick-projects"
+          }
+        }
+      },
+      "buttons": {
+        "home": {
+          "do": {
+            "main": true
+          }
+        }
+      }
+    }
+  ]
+}

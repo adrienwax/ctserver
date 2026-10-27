@@ -1,0 +1,46 @@
+{
+  "td": {
+    "execUrl": "http://127.0.0.1:9981/api/td/server/exec",
+    "handshakeUrl": "http://127.0.0.1:9981/api/td/server/td",
+    "stateUrl": "http://127.0.0.1:9982/state",
+    "timeoutMs": 1500
+  },
+  "tdPaths": {
+    "common": "/project1/CT_RIG/common",
+    "x1modes": "/project1/CT_RIG/modes",
+    "mapModule": "/project1/CT_RIG/map"
+  },
+  "scaling": {
+    "knobXvalMax": 1.0,
+    "levelVMax": 127,
+    "fxSpeedMin": 0.1,
+    "fxSpeedMax": 8.0,
+    "fxSpeedResetTopFraction": 0.1
+  },
+  "guards": {
+    "allowLayout": false
+  },
+  "ctIds": {
+    "dials": {
+      "knobTL": "L.k1",
+      "knobCL": "L.k2",
+      "knobBL": "L.k3",
+      "knobTR": "R.k1",
+      "knobCR": "R.k2",
+      "knobBR": "R.k3"
+    },
+    "wheel": "knobCT",
+    "buttons": {
+      "0": "genPage",
+      "1": "fxPage",
+      "2": "fxOn",
+      "3": "pulse",
+      "4": "freeze",
+      "5": "tap",
+      "6": "reset",
+      "7": "layout"
+    }
+  },
+  "configured": false,
+  "_comment": "Generic unconfigured bridge. Configure a compatible local TD rig and set configured=true before bridge modes can connect. CTserver generic profiles do not need this legacy rig."
+}

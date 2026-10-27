@@ -1,0 +1,1187 @@
+{
+  "name": "RESOLVE",
+  "app": "resolve",
+  "color": "magenta",
+  "followFocus": false,
+  "followWorkspace": false,
+  "_help": "Resolve 21, owner named shortcut preset render in placc. Six workspace pages; relative shortcut actions have no absolute gauge or guessed toggle state. A/B/C/D play/stop/back/forward; KBD/FN remain fine/coarse modifiers. Page buttons switch Resolve; if changing workspace in Resolve, select matching CT page. No scripting setup is required. HOVER SCROLL: point at the intended pane first; clockwise scrolls down. It is a Windows pointer-wheel action, not a guarantee of scrolling the focused app.",
+  "everyPage": {
+    "buttons": {
+      "home": {
+        "do": {
+          "main": true
+        }
+      },
+      "save": {
+        "do": {
+          "keys": "ctrl+s"
+        }
+      },
+      "undo": {
+        "do": {
+          "keys": "ctrl+z"
+        },
+        "redo": {
+          "keys": "ctrl+shift+z"
+        }
+      },
+      "a": {
+        "do": {
+          "keys": "l"
+        }
+      },
+      "b": {
+        "do": {
+          "keys": "k"
+        }
+      },
+      "c": {
+        "do": {
+          "keys": "left"
+        }
+      },
+      "d": {
+        "do": {
+          "keys": "right"
+        }
+      }
+    },
+    "wheel": {
+      "turn": {
+        "keys": [
+          "left",
+          "right"
+        ]
+      },
+      "tap": {
+        "keys": "space"
+      }
+    }
+  },
+  "pages": [
+    {
+      "name": "MEDIA",
+      "enter": {
+        "keys": "shift+1"
+      },
+      "inputExe": "Resolve.exe",
+      "_help": "Import and log footage. Click the intended source/list first. Relative shortcuts show no fabricated numeric values.",
+      "keys": {
+        "0": {
+          "label": "IMPORT",
+          "icon": "import",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+i"
+          }
+        },
+        "1": {
+          "label": "BINS",
+          "icon": "folder",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+1"
+          }
+        },
+        "2": {
+          "label": "CLIPS",
+          "icon": "clip",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+2"
+          }
+        },
+        "3": {
+          "label": "SOURCE",
+          "icon": "source",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+3"
+          }
+        },
+        "4": {
+          "label": "MARK IN",
+          "icon": "mark-in",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "i"
+          }
+        },
+        "5": {
+          "label": "MARK OUT",
+          "icon": "mark-out",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "o"
+          }
+        },
+        "6": {
+          "label": "CLEAR I/O",
+          "icon": "reset",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+x"
+          }
+        },
+        "7": {
+          "label": "SUBCLIP",
+          "icon": "slice",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+b"
+          }
+        },
+        "8": {
+          "label": "MARKER",
+          "icon": "add",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+m"
+          }
+        },
+        "9": {
+          "label": "FLAG",
+          "icon": "look",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "g"
+          }
+        },
+        "10": {
+          "label": "FIT VIEW",
+          "icon": "zoom",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "z"
+          }
+        },
+        "11": {
+          "label": "EDIT",
+          "icon": "view",
+          "sub": "PAGE",
+          "color": "sand",
+          "do": {
+            "page": 2
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "CLIPS",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+2"
+          }
+        },
+        "CL": {
+          "name": "MARKERS",
+          "turn": {
+            "keys": [
+              "shift+up",
+              "shift+down"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+m"
+          }
+        },
+        "BL": {
+          "name": "RANGE",
+          "turn": {
+            "keys": [
+              "shift+i",
+              "shift+o"
+            ]
+          },
+          "press": {
+            "keys": "x"
+          }
+        },
+        "TR": {
+          "name": "BINS",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+1"
+          }
+        },
+        "CR": {
+          "name": "SCROLL",
+          "turn": {
+            "scroll": -1
+          }
+        },
+        "BR": {
+          "name": "ZOOM",
+          "turn": {
+            "keys": [
+              "ctrl+-",
+              "ctrl+="
+            ]
+          },
+          "press": {
+            "keys": "z"
+          }
+        }
+      }
+    },
+    {
+      "name": "EDIT",
+      "enter": {
+        "keys": "shift+4"
+      },
+      "inputExe": "Resolve.exe",
+      "_help": "Timeline editing. NUDGE affects the selected edit/clip; use Undo if unintended. SNAP/LINKED are commands, not live-state toggles.",
+      "keys": {
+        "0": {
+          "label": "SELECT",
+          "icon": "clip",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+v"
+          }
+        },
+        "1": {
+          "label": "TRIM",
+          "icon": "slice",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "t"
+          }
+        },
+        "2": {
+          "label": "BLADE",
+          "icon": "slice",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "b"
+          }
+        },
+        "3": {
+          "label": "SPLIT",
+          "icon": "slice",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+b"
+          }
+        },
+        "4": {
+          "label": "SNAP",
+          "icon": "look",
+          "sub": "TOGGLE",
+          "color": "magenta",
+          "do": {
+            "keys": "n"
+          }
+        },
+        "5": {
+          "label": "LINKED",
+          "icon": "layers",
+          "sub": "TOGGLE",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+shift+l"
+          }
+        },
+        "6": {
+          "label": "INSPECT",
+          "icon": "settings",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+9"
+          }
+        },
+        "7": {
+          "label": "EFFECTS",
+          "icon": "effect",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+6"
+          }
+        },
+        "8": {
+          "label": "RETIMING",
+          "icon": "speed",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+r"
+          }
+        },
+        "9": {
+          "label": "FIT TIME",
+          "icon": "zoom",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+z"
+          }
+        },
+        "10": {
+          "label": "FUSION",
+          "icon": "view",
+          "sub": "PAGE",
+          "color": "sand",
+          "do": {
+            "page": 3
+          }
+        },
+        "11": {
+          "label": "COLOR",
+          "icon": "view",
+          "sub": "PAGE",
+          "color": "sand",
+          "do": {
+            "page": 4
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "ZOOM",
+          "turn": {
+            "keys": [
+              "ctrl+-",
+              "ctrl+="
+            ]
+          },
+          "press": {
+            "keys": "ctrl+4"
+          }
+        },
+        "CL": {
+          "name": "NUDGE",
+          "turn": {
+            "keys": [
+              ",",
+              "."
+            ]
+          },
+          "press": {
+            "keys": "ctrl+4"
+          }
+        },
+        "BL": {
+          "name": "CLIPS",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+4"
+          }
+        },
+        "TR": {
+          "name": "MARKERS",
+          "turn": {
+            "keys": [
+              "shift+up",
+              "shift+down"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+m"
+          }
+        },
+        "CR": {
+          "name": "KEYFRAMES",
+          "turn": {
+            "keys": [
+              "[",
+              "]"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+9"
+          }
+        },
+        "BR": {
+          "name": "RANGE",
+          "turn": {
+            "keys": [
+              "shift+i",
+              "shift+o"
+            ]
+          },
+          "press": {
+            "keys": "x"
+          }
+        }
+      }
+    },
+    {
+      "name": "FUSION",
+      "enter": {
+        "keys": "shift+5"
+      },
+      "inputExe": "Resolve.exe",
+      "_help": "Node/animation navigation. Put pointer/focus in the relevant Fusion viewer or spline for contextual shortcuts. TO VIEW sends selected node left/right; it is not a numeric parameter.",
+      "keys": {
+        "0": {
+          "label": "ADD TOOL",
+          "icon": "add",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+space"
+          }
+        },
+        "1": {
+          "label": "NODES",
+          "icon": "node",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "f5"
+          }
+        },
+        "2": {
+          "label": "SPLINE",
+          "icon": "lfo",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "f8"
+          }
+        },
+        "3": {
+          "label": "KEYFRAMES",
+          "icon": "layers",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "f7"
+          }
+        },
+        "4": {
+          "label": "VIEW 1",
+          "icon": "view",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "1"
+          }
+        },
+        "5": {
+          "label": "VIEW 2",
+          "icon": "view",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "2"
+          }
+        },
+        "6": {
+          "label": "FIT",
+          "icon": "zoom",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+f"
+          }
+        },
+        "7": {
+          "label": "CONTROLS",
+          "icon": "settings",
+          "sub": "TOGGLE",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+k"
+          }
+        },
+        "8": {
+          "label": "RGB",
+          "icon": "look",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "c"
+          }
+        },
+        "9": {
+          "label": "ALPHA",
+          "icon": "look",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "a"
+          }
+        },
+        "10": {
+          "label": "BOOKMARK",
+          "icon": "add",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+d"
+          }
+        },
+        "11": {
+          "label": "EDIT",
+          "icon": "view",
+          "sub": "PAGE",
+          "color": "sand",
+          "do": {
+            "page": 2
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "ZOOM",
+          "turn": {
+            "keys": [
+              "-",
+              "="
+            ]
+          },
+          "press": {
+            "keys": "ctrl+f"
+          }
+        },
+        "CL": {
+          "name": "KEYFRAMES",
+          "turn": {
+            "keys": [
+              "alt+[",
+              "alt+]"
+            ]
+          }
+        },
+        "BL": {
+          "name": "LAYERS",
+          "turn": {
+            "keys": [
+              "pageup",
+              "pagedown"
+            ]
+          },
+          "press": {
+            "keys": "home"
+          }
+        },
+        "TR": {
+          "name": "PANELS",
+          "turn": {
+            "keys": [
+              "ctrl+shift+tab",
+              "ctrl+tab"
+            ]
+          }
+        },
+        "CR": {
+          "name": "SCROLL",
+          "turn": {
+            "scroll": -1
+          }
+        },
+        "BR": {
+          "name": "TO VIEW",
+          "turn": {
+            "keys": [
+              "1",
+              "2"
+            ]
+          },
+          "press": {
+            "keys": "`"
+          }
+        }
+      },
+      "wheel": {
+        "turn": {
+          "keys": [
+            "[",
+            "]"
+          ]
+        },
+        "tap": {
+          "keys": "space"
+        }
+      },
+      "buttons": {
+        "c": {
+          "do": {
+            "keys": "["
+          }
+        },
+        "d": {
+          "do": {
+            "keys": "]"
+          }
+        }
+      }
+    },
+    {
+      "name": "COLOR",
+      "enter": {
+        "keys": "shift+6"
+      },
+      "inputExe": "Resolve.exe",
+      "_help": "Build and compare node grades, stills and versions. No fake Lift/Gamma/Gain readback: Resolve SDK cannot read those values. Printer Lights omitted because enabled state cannot be verified.",
+      "keys": {
+        "0": {
+          "label": "SERIAL",
+          "icon": "add",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+s"
+          }
+        },
+        "1": {
+          "label": "PARALLEL",
+          "icon": "node",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+p"
+          }
+        },
+        "2": {
+          "label": "LAYER",
+          "icon": "layers",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+l"
+          }
+        },
+        "3": {
+          "label": "OUTSIDE",
+          "icon": "node",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+o"
+          }
+        },
+        "4": {
+          "label": "BYPASS",
+          "icon": "effect",
+          "sub": "TOGGLE",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+d"
+          }
+        },
+        "5": {
+          "label": "ALL BYPASS",
+          "icon": "effect",
+          "sub": "TOGGLE",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+d"
+          }
+        },
+        "6": {
+          "label": "GRAB STILL",
+          "icon": "freeze",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+alt+g"
+          }
+        },
+        "7": {
+          "label": "SHOW STILL",
+          "icon": "view",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+alt+f"
+          }
+        },
+        "8": {
+          "label": "VERSION +",
+          "icon": "add",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+y"
+          }
+        },
+        "9": {
+          "label": "BASE VER",
+          "icon": "reset",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+u"
+          }
+        },
+        "10": {
+          "label": "STATIC KEY",
+          "icon": "add",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+]"
+          }
+        },
+        "11": {
+          "label": "DYNAMIC",
+          "icon": "lfo",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+["
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "NODES",
+          "turn": {
+            "keys": [
+              "shift+alt+;",
+              "shift+alt+'"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+d"
+          }
+        },
+        "CL": {
+          "name": "CLIPS",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          }
+        },
+        "BL": {
+          "name": "STILLS",
+          "turn": {
+            "keys": [
+              "ctrl+alt+b",
+              "ctrl+alt+n"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+alt+f"
+          }
+        },
+        "TR": {
+          "name": "VERSIONS",
+          "turn": {
+            "keys": [
+              "ctrl+b",
+              "ctrl+n"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+u"
+          }
+        },
+        "CR": {
+          "name": "KEYFRAMES",
+          "turn": {
+            "keys": [
+              "[",
+              "]"
+            ]
+          }
+        },
+        "BR": {
+          "name": "ZOOM",
+          "turn": {
+            "keys": [
+              "ctrl+-",
+              "ctrl+="
+            ]
+          },
+          "press": {
+            "keys": "z"
+          }
+        }
+      }
+    },
+    {
+      "name": "AUDIO",
+      "enter": {
+        "keys": "shift+7"
+      },
+      "inputExe": "Resolve.exe",
+      "_help": "Selected-clip audio editing, not an invented mixer bank. GAIN/SLIP act on selected clips; read exact results in Resolve Inspector. Fades end/start at playhead.",
+      "keys": {
+        "0": {
+          "label": "INSPECT",
+          "icon": "settings",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+9"
+          }
+        },
+        "1": {
+          "label": "TIMELINE",
+          "icon": "layers",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+4"
+          }
+        },
+        "2": {
+          "label": "INDEX",
+          "icon": "clip",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+7"
+          }
+        },
+        "3": {
+          "label": "GAIN -1",
+          "icon": "volume",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+alt+-"
+          }
+        },
+        "4": {
+          "label": "GAIN +1",
+          "icon": "volume",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+alt+="
+          }
+        },
+        "5": {
+          "label": "FADE IN",
+          "icon": "mark-in",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+alt+d"
+          }
+        },
+        "6": {
+          "label": "FADE OUT",
+          "icon": "mark-out",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+alt+g"
+          }
+        },
+        "7": {
+          "label": "CROSSFADE",
+          "icon": "effect",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+alt+f"
+          }
+        },
+        "8": {
+          "label": "DUPLICATE",
+          "icon": "layers",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+shift+d"
+          }
+        },
+        "9": {
+          "label": "WAVE RESET",
+          "icon": "reset",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+alt+r"
+          }
+        },
+        "10": {
+          "label": "MARKER",
+          "icon": "add",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+m"
+          }
+        },
+        "11": {
+          "label": "DELIVER",
+          "icon": "view",
+          "sub": "PAGE",
+          "color": "sand",
+          "do": {
+            "page": 6
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "CLIP GAIN",
+          "turn": {
+            "keys": [
+              "ctrl+alt+-",
+              "ctrl+alt+="
+            ]
+          }
+        },
+        "CL": {
+          "name": "ZOOM",
+          "turn": {
+            "keys": [
+              "ctrl+-",
+              "ctrl+="
+            ]
+          },
+          "press": {
+            "keys": "ctrl+4"
+          }
+        },
+        "BL": {
+          "name": "TRACK",
+          "turn": {
+            "keys": [
+              "ctrl+p",
+              "ctrl+;"
+            ]
+          }
+        },
+        "TR": {
+          "name": "EDIT POINT",
+          "turn": {
+            "keys": [
+              "ctrl+l",
+              "ctrl+'"
+            ]
+          }
+        },
+        "CR": {
+          "name": "MARKERS",
+          "turn": {
+            "keys": [
+              "shift+up",
+              "shift+down"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+m"
+          }
+        },
+        "BR": {
+          "name": "SLIP AUDIO",
+          "turn": {
+            "keys": [
+              "alt+,",
+              "alt+."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "DELIVER",
+      "enter": {
+        "keys": "shift+8"
+      },
+      "inputExe": "Resolve.exe",
+      "_help": "Review the output range and settings. Add to Render Queue / Render stays explicit in Resolve; no undocumented render shortcut, remote auto-render or upload. SETTINGS scroll requires pointer over settings.",
+      "keys": {
+        "0": {
+          "label": "MARK IN",
+          "icon": "mark-in",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "i"
+          }
+        },
+        "1": {
+          "label": "MARK OUT",
+          "icon": "mark-out",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "o"
+          }
+        },
+        "2": {
+          "label": "CLEAR I/O",
+          "icon": "reset",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "alt+x"
+          }
+        },
+        "3": {
+          "label": "CLIP RANGE",
+          "icon": "clip",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "x"
+          }
+        },
+        "4": {
+          "label": "GO IN",
+          "icon": "back",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+i"
+          }
+        },
+        "5": {
+          "label": "GO OUT",
+          "icon": "forward",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+o"
+          }
+        },
+        "6": {
+          "label": "FIT TIME",
+          "icon": "zoom",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+z"
+          }
+        },
+        "7": {
+          "label": "FIT VIEW",
+          "icon": "zoom",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "z"
+          }
+        },
+        "8": {
+          "label": "FULL VIEW",
+          "icon": "view",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "shift+f"
+          }
+        },
+        "9": {
+          "label": "SAVE AS",
+          "icon": "save",
+          "sub": "",
+          "color": "magenta",
+          "do": {
+            "keys": "ctrl+shift+s"
+          }
+        },
+        "10": {
+          "label": "EDIT",
+          "icon": "view",
+          "sub": "PAGE",
+          "color": "sand",
+          "do": {
+            "page": 2
+          }
+        },
+        "11": {
+          "label": "AUDIO",
+          "icon": "view",
+          "sub": "PAGE",
+          "color": "sand",
+          "do": {
+            "page": 5
+          }
+        }
+      },
+      "dials": {
+        "TL": {
+          "name": "CLIPS",
+          "turn": {
+            "keys": [
+              "up",
+              "down"
+            ]
+          },
+          "press": {
+            "keys": "x"
+          }
+        },
+        "CL": {
+          "name": "MARKERS",
+          "turn": {
+            "keys": [
+              "shift+up",
+              "shift+down"
+            ]
+          },
+          "press": {
+            "keys": "ctrl+m"
+          }
+        },
+        "BL": {
+          "name": "ZOOM",
+          "turn": {
+            "keys": [
+              "ctrl+-",
+              "ctrl+="
+            ]
+          },
+          "press": {
+            "keys": "shift+z"
+          }
+        },
+        "TR": {
+          "name": "RANGE",
+          "turn": {
+            "keys": [
+              "shift+i",
+              "shift+o"
+            ]
+          }
+        },
+        "CR": {
+          "name": "SCROLL",
+          "turn": {
+            "scroll": -1
+          }
+        },
+        "BR": {
+          "name": "VOLUME",
+          "turn": {
+            "volume": 1
+          }
+        }
+      }
+    }
+  ]
+}

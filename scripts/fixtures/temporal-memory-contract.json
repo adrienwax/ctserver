@@ -1,0 +1,763 @@
+{
+  "format": "td-ct-rig-contract",
+  "contractVersion": "1.1.0",
+  "status": "planned-source-only",
+  "owner": "moshman",
+  "app": "TouchDesigner",
+  "requiredBuild": "2021.16410",
+  "variantId": "moshman-td-temporal-memory-abac500b",
+  "profileId": "atlas-moshman-td-temporal-memory-abac500b",
+  "projectTarget": "X:/Examples/TemporalMemory.tox",
+  "ctRigPath": "/project1/CT_RIG",
+  "projectidParameter": "Projectid",
+  "nameRule": "^[A-Z][a-z0-9]+$",
+  "dials": [
+    {
+      "id": "set",
+      "label": "SET",
+      "kind": "set",
+      "recipeIds": [],
+      "dials": [
+        {
+          "name": "Setin",
+          "label": "IN",
+          "sub": "FRACT",
+          "type": "float",
+          "min": 0,
+          "max": 0.9,
+          "default": 0,
+          "step": 0.001,
+          "unit": "clip fraction",
+          "slot": "TL",
+          "role": "clip in-point",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Setin",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Speed",
+          "label": "SPEED",
+          "sub": "X",
+          "type": "float",
+          "min": 0.5,
+          "max": 1.5,
+          "default": 1,
+          "step": 0.01,
+          "unit": "playback multiplier",
+          "slot": "CL",
+          "role": "finite-clip rate",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Speed",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Setwindow",
+          "label": "WINDOW",
+          "sub": "SEC",
+          "type": "int",
+          "min": 1,
+          "max": 29,
+          "default": 8,
+          "step": 1,
+          "unit": "frames",
+          "slot": "BL",
+          "role": "maximum history age window; convert to source frames using read-only Sourcefps",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Setwindow",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Setout",
+          "label": "OUT",
+          "sub": "FRACT",
+          "type": "float",
+          "min": 0.1,
+          "max": 1,
+          "default": 1,
+          "step": 0.001,
+          "unit": "clip fraction",
+          "slot": "TR",
+          "role": "exclusive clip out fraction",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Setout",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Setfit",
+          "label": "FIT",
+          "sub": "X",
+          "type": "float",
+          "min": 0.9,
+          "max": 1.1,
+          "default": 1,
+          "step": 0.001,
+          "unit": "scale multiplier",
+          "slot": "CR",
+          "role": "source fit scale",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Setfit",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Master",
+          "label": "MASTER",
+          "sub": "LEVEL",
+          "type": "float",
+          "min": 0,
+          "max": 1,
+          "default": 1,
+          "step": 0.01,
+          "unit": "linear output level",
+          "slot": "BR",
+          "role": "final output fader",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Master",
+            "status": "planned"
+          }
+        }
+      ]
+    },
+    {
+      "id": "smear",
+      "label": "SMEAR",
+      "kind": "recipe",
+      "recipeIds": [
+        "td-smear-average"
+      ],
+      "dials": [
+        {
+          "name": "Smearframes",
+          "label": "FRAMES",
+          "sub": "SAMPLES",
+          "type": "int",
+          "min": 1,
+          "max": 29,
+          "default": 8,
+          "step": 1,
+          "unit": "samples",
+          "slot": "TL",
+          "role": "weighted history span",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Smearframes",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Smearstep",
+          "label": "STEP",
+          "sub": "FRAME",
+          "type": "int",
+          "min": 1,
+          "max": 2,
+          "default": 1,
+          "step": 1,
+          "unit": "frames per tap",
+          "slot": "CL",
+          "role": "sample age spacing",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Smearstep",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Smearoffset",
+          "label": "OFFSET",
+          "sub": "SAMPLES",
+          "type": "int",
+          "min": 0,
+          "max": 29,
+          "default": 0,
+          "step": 1,
+          "unit": "frames",
+          "slot": "BL",
+          "role": "history age offset; convert to source frames using read-only Sourcefps",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Smearoffset",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Smearmix",
+          "label": "MIX",
+          "sub": "DRY/WET",
+          "type": "float",
+          "min": 0,
+          "max": 1,
+          "default": 1,
+          "step": 0.01,
+          "unit": "mix ratio",
+          "slot": "TR",
+          "role": "effect mix",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Smearmix",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Smearkeep",
+          "label": "KEEP",
+          "sub": "DECAY",
+          "type": "float",
+          "min": 0.2,
+          "max": 1,
+          "default": 0.7,
+          "step": 0.01,
+          "unit": "per-sample weight",
+          "slot": "CR",
+          "role": "weighted history decay",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Smearkeep",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Master",
+          "label": "MASTER",
+          "sub": "LEVEL",
+          "type": "float",
+          "min": 0,
+          "max": 1,
+          "default": 1,
+          "step": 0.01,
+          "unit": "linear output level",
+          "slot": "BR",
+          "role": "final output fader",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Master",
+            "status": "planned"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bands",
+      "label": "BANDS",
+      "kind": "recipe",
+      "recipeIds": [
+        "td-time-bands"
+      ],
+      "dials": [
+        {
+          "name": "Bandsframes",
+          "label": "FRAMES",
+          "sub": "SAMPLES",
+          "type": "int",
+          "min": 1,
+          "max": 29,
+          "default": 8,
+          "step": 1,
+          "unit": "frames",
+          "slot": "TL",
+          "role": "maximum band age",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Bandsframes",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Bandsstep",
+          "label": "STEP",
+          "sub": "FRAME",
+          "type": "int",
+          "min": 1,
+          "max": 2,
+          "default": 1,
+          "step": 1,
+          "unit": "frames per band step",
+          "slot": "CL",
+          "role": "sample age spacing",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Bandsstep",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Bandsoffset",
+          "label": "OFFSET",
+          "sub": "SAMPLES",
+          "type": "int",
+          "min": 0,
+          "max": 29,
+          "default": 0,
+          "step": 1,
+          "unit": "frames",
+          "slot": "BL",
+          "role": "history age offset; convert to source frames using read-only Sourcefps",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Bandsoffset",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Bandsmix",
+          "label": "MIX",
+          "sub": "DRY/WET",
+          "type": "float",
+          "min": 0,
+          "max": 1,
+          "default": 1,
+          "step": 0.01,
+          "unit": "mix ratio",
+          "slot": "TR",
+          "role": "effect mix",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Bandsmix",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Bandscount",
+          "label": "BANDS",
+          "sub": "COUNT",
+          "type": "int",
+          "min": 2,
+          "max": 24,
+          "default": 8,
+          "step": 1,
+          "unit": "bands",
+          "slot": "CR",
+          "role": "fractional band density",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Bandscount",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Master",
+          "label": "MASTER",
+          "sub": "LEVEL",
+          "type": "float",
+          "min": 0,
+          "max": 1,
+          "default": 1,
+          "step": 0.01,
+          "unit": "linear output level",
+          "slot": "BR",
+          "role": "final output fader",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Master",
+            "status": "planned"
+          }
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "label": "MOTION",
+      "kind": "recipe",
+      "recipeIds": [
+        "td-smear-average",
+        "td-time-bands"
+      ],
+      "dials": [
+        {
+          "name": "Motionamp",
+          "label": "DRIFT",
+          "sub": "FRACT",
+          "type": "float",
+          "min": 0,
+          "max": 0.03,
+          "default": 0.004,
+          "step": 0.0005,
+          "unit": "frame fraction",
+          "slot": "TL",
+          "role": "bounded drift amplitude",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Motionamp",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Motionrate",
+          "label": "RATE",
+          "sub": "HZ",
+          "type": "float",
+          "min": 0.01,
+          "max": 0.12,
+          "default": 0.03,
+          "step": 0.001,
+          "unit": "cycles per second",
+          "slot": "CL",
+          "role": "bounded modulation rate",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Motionrate",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Motiony",
+          "label": "Y",
+          "sub": "FRACT",
+          "type": "float",
+          "min": -0.05,
+          "max": 0.05,
+          "default": 0,
+          "step": 0.001,
+          "unit": "frame fraction",
+          "slot": "BL",
+          "role": "vertical source offset",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Motiony",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Motionx",
+          "label": "X",
+          "sub": "FRACT",
+          "type": "float",
+          "min": -0.05,
+          "max": 0.05,
+          "default": 0,
+          "step": 0.001,
+          "unit": "frame fraction",
+          "slot": "TR",
+          "role": "horizontal source offset",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Motionx",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Motionzoom",
+          "label": "ZOOM",
+          "sub": "X",
+          "type": "float",
+          "min": 0.95,
+          "max": 1.05,
+          "default": 1,
+          "step": 0.001,
+          "unit": "scale multiplier",
+          "slot": "CR",
+          "role": "source scale",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Motionzoom",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Master",
+          "label": "MASTER",
+          "sub": "LEVEL",
+          "type": "float",
+          "min": 0,
+          "max": 1,
+          "default": 1,
+          "step": 0.01,
+          "unit": "linear output level",
+          "slot": "BR",
+          "role": "final output fader",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Master",
+            "status": "planned"
+          }
+        }
+      ]
+    },
+    {
+      "id": "out",
+      "label": "OUT",
+      "kind": "out",
+      "recipeIds": [],
+      "dials": [
+        {
+          "name": "Outcontrast",
+          "label": "CONTRAST",
+          "sub": "X",
+          "type": "float",
+          "min": 0.5,
+          "max": 1.5,
+          "default": 1,
+          "step": 0.01,
+          "unit": "contrast multiplier",
+          "slot": "TL",
+          "role": "output contrast",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Outcontrast",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Outgamma",
+          "label": "GAMMA",
+          "sub": "X",
+          "type": "float",
+          "min": 0.5,
+          "max": 1.5,
+          "default": 1,
+          "step": 0.01,
+          "unit": "gamma multiplier",
+          "slot": "CL",
+          "role": "output gamma",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Outgamma",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Outlift",
+          "label": "LIFT",
+          "sub": "LINEAR",
+          "type": "float",
+          "min": -0.1,
+          "max": 0.1,
+          "default": 0,
+          "step": 0.001,
+          "unit": "linear offset",
+          "slot": "BL",
+          "role": "output black lift",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Outlift",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Outsat",
+          "label": "SAT",
+          "sub": "X",
+          "type": "float",
+          "min": 0,
+          "max": 2,
+          "default": 1,
+          "step": 0.01,
+          "unit": "saturation multiplier",
+          "slot": "TR",
+          "role": "output saturation",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Outsat",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Outhue",
+          "label": "HUE",
+          "sub": "DEG",
+          "type": "float",
+          "min": -30,
+          "max": 30,
+          "default": 0,
+          "step": 0.1,
+          "unit": "degrees",
+          "slot": "CR",
+          "role": "output hue rotation",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Outhue",
+            "status": "planned"
+          }
+        },
+        {
+          "name": "Master",
+          "label": "MASTER",
+          "sub": "LEVEL",
+          "type": "float",
+          "min": 0,
+          "max": 1,
+          "default": 1,
+          "step": 0.01,
+          "unit": "linear output level",
+          "slot": "BR",
+          "role": "final output fader",
+          "readback": {
+            "source": "/project1/CT_RIG.par.Master",
+            "status": "planned"
+          }
+        }
+      ]
+    }
+  ],
+  "transport": {
+    "A": {
+      "par": "Play",
+      "type": "Pulse",
+      "meaning": "start/resume finite clip"
+    },
+    "B": {
+      "par": "Pause",
+      "type": "Pulse",
+      "meaning": "pause source and freeze history writes without rewind"
+    },
+    "C": {
+      "par": "Stepback",
+      "type": "Pulse",
+      "meaning": "one source frame backward; flush/rebuild history; preserve paused state"
+    },
+    "D": {
+      "par": "Stepforward",
+      "type": "Pulse",
+      "meaning": "one source frame forward; append exactly one sample"
+    },
+    "wheel": {
+      "verb": "rigFrameStep",
+      "par": "Position",
+      "type": "Float0..1",
+      "meaning": "one source frame per normal detent; convert delta/(Framecount-1), clamp to trim; flush/rebuild after discontinuity"
+    },
+    "KBD": {
+      "meaning": "fine wheel scrub, one legal frame per detent; frame granularity cannot be fractional"
+    },
+    "FN": {
+      "meaning": "coarse wheel scrub, five legal frames per detent; clamp to trim"
+    },
+    "wheelTap": {
+      "par": "Playpause",
+      "type": "Pulse",
+      "meaning": "toggle play/pause"
+    },
+    "readback": [
+      "Position",
+      "Currentframe",
+      "Framecount",
+      "Sourcefps",
+      "Playing",
+      "Historyfill"
+    ]
+  },
+  "actions": {
+    "Play": "Pulse",
+    "Pause": "Pulse",
+    "Stepback": "Pulse",
+    "Stepforward": "Pulse",
+    "Playpause": "Pulse",
+    "Resetstate": "Pulse",
+    "View": "Pulse",
+    "Toggleactive": "Pulse",
+    "Selectclean": "Pulse",
+    "Selectsmear": "Pulse",
+    "Selectbands": "Pulse",
+    "Selectprev": "Pulse",
+    "Selectnext": "Pulse",
+    "Defaultset": "Pulse",
+    "Defaultsmear": "Pulse",
+    "Defaultbands": "Pulse",
+    "Defaultmotion": "Pulse",
+    "Defaultout": "Pulse",
+    "Outputgate": "Toggle default false",
+    "Motionenabled": "Toggle default false",
+    "Smearenabled": "Toggle default false",
+    "Bandsenabled": "Toggle default false",
+    "Toggleoutput": "Pulse",
+    "Togglemotion": "Pulse",
+    "Togglesmear": "Pulse",
+    "Togglebands": "Pulse"
+  },
+  "stateReadbacks": [
+    "Projectid",
+    "Sourceready",
+    "Sourcefps",
+    "Framecount",
+    "Currentframe",
+    "Position",
+    "Historyfill",
+    "Historyneed",
+    "Historyhead",
+    "Status",
+    "Playing",
+    "Selectedrecipe",
+    "Effectenabled",
+    "Activeenabled",
+    "Motionenabled",
+    "Smearenabled",
+    "Bandsenabled",
+    "Outputgate",
+    "Previewopen",
+    "Master"
+  ],
+  "semantics": {
+    "selectclean": "Select clean source; disable Smear and Bands.",
+    "selectsmear": "Select and enable Smear; disable Bands.",
+    "selectbands": "Select and enable Bands; disable Smear.",
+    "motionenabled": "Independent upstream optional bounded modulation; default off.",
+    "master": "Same final output fader, deliberately repeated as BR across five pages.",
+    "defaults": "Page Defaults restores only that page's controls; shared Master and transport are preserved.",
+    "resetstate": "Clear Texture3D history, deterministically refill around current frame, keep position and play/pause state.",
+    "outputgate": "Toggleoutput pulses the output gate; Outputgate is the state readback, cold default false.",
+    "view": "View opens/closes the isolated OUT TOP preview window on explicit press; it never auto-opens on build/reload.",
+    "smear": "Faithful integer sample-age weighted average using Frames and Keep; dead Bands input omitted.",
+    "bands": "Faithful row-band temporal sampling using integer Frames and Bands; dead Keep input omitted."
+  },
+  "graphPlan": {
+    "source": "X:/Examples/calm-fractal-30s.mp4",
+    "sourceSha256": "661aeaf6be4764e0f2d7427c1a2f48d7f5b5bf57836e24c9ca46f34b28daa548",
+    "sourceReadOnly": true,
+    "sourceFpsExpected": 30,
+    "sourceFramesExpected": 900,
+    "historySlots": 30,
+    "historyWrite": "Texture3D cache of 30 frames. Active and Replace Single stay off; each source sample is written once by Replace Index + Replace Single Pulse. Frame and band counts, offsets and step sizes are integer frames.",
+    "seek": "On backward step, wheel discontinuity, trim or window change: freeze; reset; prefill previous source frames oldest-to-newest one per TD frame; land at target; preserve prior play state; expose WARMING.",
+    "end": "Stop at Setout exclusive frame; no implicit wrap.",
+    "order": [
+      "Movie File In TOP (Specify Index, Frames units)",
+      "Fit/source transform",
+      "optional Motion GLSL TOP",
+      "Texture 3D TOP history sampler",
+      "Smear GLSL TOP OR Time Bands GLSL TOP; never both in first A/B",
+      "select clean/Smear/Bands",
+      "OUT GLSL TOP",
+      "Master/output gate",
+      "OUT TOP"
+    ],
+    "sourceRecipeInputs": {
+      "td-smear-average": {
+        "Recipe.tox": {
+          "sha256": "b0356c0484fd7a638778a6ddcbe3b57cea9d2c5cb607b3e8c32f777b4e6d8644",
+          "bytes": 1238
+        },
+        "Build.py": {
+          "sha256": "9620362ea58bc2e810ac35be7c69d242f5bae2ab16654557d12baff51b0f1385",
+          "bytes": 1560
+        },
+        "network.json": {
+          "sha256": "3d80256ee28b0340b62838eb6437ed4139557bef51887f07537e63fba260ed7a",
+          "bytes": 4751
+        },
+        "recipe.json": {
+          "sha256": "bcf80a83125888154b6c93edce5f9473132a2d93ddd9d807c8eb1776addaccc6",
+          "bytes": 4638
+        }
+      },
+      "td-time-bands": {
+        "Recipe.tox": {
+          "sha256": "734d2774c715c4412ce306b84d83645c1711389bc7cb64c6539db8679697f6b1",
+          "bytes": 1182
+        },
+        "Build.py": {
+          "sha256": "9620362ea58bc2e810ac35be7c69d242f5bae2ab16654557d12baff51b0f1385",
+          "bytes": 1560
+        },
+        "network.json": {
+          "sha256": "fe5e8570354b18cd0811d41a6e2535d24022196bc9cce8603bce47ad25d77854",
+          "bytes": 4688
+        },
+        "recipe.json": {
+          "sha256": "0a0b1db21a6bd6a0d20db1a775b8e1b3a9d04c61e20de10c5660869ea33fe24e",
+          "bytes": 4658
+        }
+      }
+    }
+  },
+  "tiles": {
+    "0": "ENABLE active stage only; selected branch on SET/OUT, Smearenabled on SMEAR, Bandsenabled on BANDS, Motionenabled on MOTION.",
+    "1": "DEFAULTS current page params only.",
+    "2": "VIEW preview only.",
+    "3": "RESET history only, no transport rewind.",
+    "4": "CLEAN select state clean.",
+    "5": "SMEAR select+enable atomically; feedback from Selectedrecipe.",
+    "6": "BANDS select+enable atomically; feedback from Selectedrecipe.",
+    "7": "Unavailable: no third recipe.",
+    "8": "Previous clean/Smear/Bands selection.",
+    "9": "Next clean/Smear/Bands selection.",
+    "10": "Unavailable: no second bank.",
+    "11": "OUTPUT gate toggle, default off."
+  },
+  "sourceEvidence": {
+    "recipeRecords": "Source verified only; source records say no live TD cook/preview.",
+    "nativeProject": "Not built yet; Build.py is a builder source for a later isolated TD2021 test.",
+    "ctProfile": "BUILD-owned; not generated here.",
+    "tests": "No app/native/render/CT/physical tests performed."
+  }
+}
