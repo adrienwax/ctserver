@@ -1,14 +1,14 @@
 // Contrast check for the panel: every text-on-ground pair it uses, against WCAG AA (4.5:1 for text,
 // 3:1 for the large state word and for non-text marks). Reads the suite tokens (ui/tokens.css, the HUD
 // theme) and the panel's short names over them (ui/app.css :root), resolving var() and color-mix().
-//   node check-contrast.mjs        prints each pair; exits 1 if any fails
+//   node scripts/check-contrast.mjs        prints each pair; exits 1 if any fails
 import fs from 'node:fs'
 
 const read = (f) => fs.readFileSync(new URL(f, import.meta.url), 'utf8')
 // the tokens.css blocks that apply to the default (HUD) theme, then the panel's own :root; later wins
-const blocks = [...read('./ui/tokens.css').matchAll(/([^{}]+)\{([^{}]*)\}/g)]
+const blocks = [...read('../ui/tokens.css').matchAll(/([^{}]+)\{([^{}]*)\}/g)]
   .filter(m => /:root|\[data-theme\]|"hud"/.test(m[1]) && !/studio|heritage/.test(m[1])).map(m => m[2])
-blocks.push(read('./ui/app.css').match(/\n:root \{([^}]*)\}/)[1])
+blocks.push(read('../ui/app.css').match(/\n:root \{([^}]*)\}/)[1])
 const RAW = {}
 for (const body of blocks) for (const m of body.replace(/\/\*[\s\S]*?\*\//g, '').matchAll(/--([\w-]+)\s*:\s*([^;]+);/g)) RAW[m[1]] = m[2].trim()
 const rgb = (h) => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16))

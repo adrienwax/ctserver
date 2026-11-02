@@ -4,7 +4,7 @@
  * header). The short names below are this panel's own, each re-pointed at a suite token:
  *
  *   ground / head / panel / raised   the surface ramp
- *   ink / ink-2 / ink-3              the text tiers, all AA (check-contrast.mjs)
+ *   ink / ink-2 / ink-3              the text tiers, all AA (scripts/check-contrast.mjs)
  *   int-*                            interactive cyan: build, select, focus, the live CT
  *   --fn-commit                      teal: Activate on CT, Replace, Check and save
  *   ok / warn / busy / bad           valid green · advisory amber · in-flight amber · crimson, caution only

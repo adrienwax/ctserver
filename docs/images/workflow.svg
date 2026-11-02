@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="174" viewBox="0 0 960 174" role="img" aria-labelledby="title desc">
+<title id="title">From mapping to control</title>
+<desc id="desc">1  MAP: Select app, page and control; 2  BIND: Choose and assign an action; 3  LIVE: Activate and use the profile. Labels autosave. Binding assigns an action. Activation chooses the profile to use.</desc>
+<rect width="960" height="174" rx="8" fill="#101319"/>
+<rect x="18" y="18" width="294" height="104" rx="5" fill="#1c222c" stroke="#394350"/>
+<rect x="18" y="18" width="5" height="104" fill="#52d7e6"/>
+<text x="38" y="52" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#52d7e6">1  MAP</text>
+<text x="38" y="88" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#e4e8ef">Select app, page and control</text>
+<rect x="332" y="18" width="294" height="104" rx="5" fill="#1c222c" stroke="#394350"/>
+<rect x="332" y="18" width="5" height="104" fill="#ee9c7b"/>
+<text x="352" y="52" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#ee9c7b">2  BIND</text>
+<text x="352" y="88" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#e4e8ef">Choose and assign an action</text>
+<rect x="646" y="18" width="294" height="104" rx="5" fill="#1c222c" stroke="#394350"/>
+<rect x="646" y="18" width="5" height="104" fill="#69c7b6"/>
+<text x="666" y="52" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#69c7b6">3  LIVE</text>
+<text x="666" y="88" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#e4e8ef">Activate and use the profile</text>
+<text x="24" y="153" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#bac3d1">Labels autosave. Binding assigns an action. Activation chooses the profile to use.</text></svg>

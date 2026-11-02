@@ -15,7 +15,8 @@
     "test:persistence": "node scripts/run-offline.mjs persistence",
     "package:check": "node scripts/package.mjs --check",
     "package:plan": "node scripts/package.mjs --plan",
-    "setup:electron": "node node_modules/electron/install.js"
+    "setup:electron": "node node_modules/electron/install.js",
+    "test:contrast": "node scripts/check-contrast.mjs"
   },
   "engines": {
     "node": ">=22.12.0"
