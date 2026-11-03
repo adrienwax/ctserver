@@ -12,10 +12,11 @@ jobs:
   offline:
     runs-on: windows-latest
     timeout-minutes: 15
-    env:
-      KRAB_SCRATCH_ROOT: ${{ runner.temp }}\ctserver-checks
     steps:
       - uses: actions/checkout@v4
+      - name: Set isolated scratch directory
+        shell: pwsh
+        run: '"KRAB_SCRATCH_ROOT=$env:RUNNER_TEMP\ctserver-checks" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append'
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
