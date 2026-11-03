@@ -1,6 +1,6 @@
 {
   "name": "waxyct",
-  "version": "3.1.0-alpha.8-codex.9",
+  "version": "1.0.0-rc.1",
   "private": true,
   "description": "One small panel for the Loupedeck CT: its state at a glance, a clean hand-off between the TD bridge and EDENA, and a guided fix for the quiet state.",
   "type": "module",
@@ -68,5 +68,6 @@
     "electron": "43.6.0",
     "electron-builder": "26.15.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "ak wax"
 }

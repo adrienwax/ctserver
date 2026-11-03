@@ -2,13 +2,14 @@ SOURCE ASSETS AND THIRD-PARTY MATERIAL
 
 Project SVG artwork is shipped as source, under the project's licence where
 owned by the project author. App and hardware names do not imply endorsement.
-No personal footage, sample projects or bundled font binaries are in this
-source export. No marketplace icon pack is included.
+No personal footage or sample projects are in this source export. The two
+UI font binaries are unmodified Fontsource Inter and JetBrains Mono 5.3.0
+Latin variable fonts, under OFL-1.1. Their full notices are in
+third-party/fonts/ and exact hashes are in ui/fonts/FONT-MANIFEST.json.
+Design-reference sheets are excluded from the Windows runtime. No marketplace icon pack is included.
 
-Moshpit obtains Inter and JetBrains Mono through its locked Fontsource packages.
-Their SIL Open Font Licence texts and copyright notices are in third-party/;
-they are not relicensed under MIT. Runtime/FFmpeg/dependency binary distribution
-needs a separate exact-package review before downloads are offered.
+CTserver ships these fonts under their original SIL Open Font Licence,
+not the project's MIT licence. Keep the notices with redistributed builds.
 
 CT icon source provenance is recorded in the existing stroke renderer and
 procedural app-icon generator. The local audit retains the original provenance

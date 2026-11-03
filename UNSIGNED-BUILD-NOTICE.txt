@@ -1,0 +1,5 @@
+Unsigned Windows test build. No publisher certificate is attached.
+Read the release notes for the exact tested scope before using it.
+The app, fonts and dependency notices are bundled; no private projects,
+media or ATLAS content is included. Original CTserver code is MIT;
+third-party components retain their respective licences.

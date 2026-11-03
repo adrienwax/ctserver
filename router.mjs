@@ -11,6 +11,7 @@
 // panel does it only when the viewer confirms a force stop, after a clean stop has failed.
 import { execFile, execFileSync, fork, spawn } from 'node:child_process'
 import fs from 'node:fs'
+import { sendUIResource } from './host/ui-resource.mjs'
 import {guidesRoute} from './host/home-routes.mjs'
 import http from 'node:http'
 import path from 'node:path'
@@ -617,7 +618,7 @@ function configUpdates() {
     return { version: r.version, preserved: r.files.filter(f => f.status === 'preserved').map(f => f.file) }
   } catch { return null }
 }
-const snapshot = () => ({ ...S, configuration:!S.host?configuredInventory(CONFIG_DIR):null, tdPort: (cfg.tdUrl.match(/:(\d+)\//) || [])[1] || null, build: {...BUILD,label:process.env.WAXYCT_HOME_CANDIDATE_ROOT?'CT Home r04 candidate':'CTserver · KRAB Home'}, children: { bridge: children.bridge?.pid ?? null, probe: children.probe?.pid ?? null, host: children.host?.pid ?? null }, now: Date.now(), bridgeDir: cfg.bridgeDir, edenaDir: cfg.edenaDir, configDir: CONFIG_DIR, configUpdates: configUpdates() })
+const snapshot = () => ({ ...S, configuration:!S.host?configuredInventory(CONFIG_DIR):null, tdPort: (cfg.tdUrl.match(/:(\d+)\//) || [])[1] || null, build: {...BUILD,label:`CTserver${process.env.WAXYCT_HOME_CANDIDATE_ROOT?' Candidate':''}`}, children: { bridge: children.bridge?.pid ?? null, probe: children.probe?.pid ?? null, host: children.host?.pid ?? null }, now: Date.now(), bridgeDir: cfg.bridgeDir, edenaDir: cfg.edenaDir, configDir: CONFIG_DIR, configUpdates: configUpdates() })
 
 // The page, from ui/. A fixed list, so no request can name any other file.
 const UI = {
@@ -646,8 +647,7 @@ const server = http.createServer((req, res) => {
   if (!/^(127\.0\.0\.1|localhost):\d+$/.test(req.headers.host || '')) { res.writeHead(403); return res.end() }
   const file = req.method === 'GET' && UI[req.url.split('?')[0]]
   if (file) {
-    res.writeHead(200, { 'Content-Type': file[1], 'Cache-Control': 'no-store' })
-    return res.end(fs.readFileSync(path.join(HERE, 'ui', file[0])))
+    return sendUIResource(res, path.join(HERE, 'ui', file[0]), file[1])
   }
   if (req.method === 'GET' && req.url === '/api/projects') {
     try {

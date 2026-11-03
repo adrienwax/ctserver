@@ -3,7 +3,7 @@
   "moshpit": {
     "name": "Moshpit",
     "color": "coral",
-    "exe": "Moshpit 3.exe",
+    "exe": "Moshpit.exe",
     "target": "moshpit",
     "endpointFile": "%APPDATA%/Moshpit 3/control-endpoint.json"
   },

@@ -1,0 +1,31 @@
+name: Windows source checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      KRAB_SCRATCH_ROOT: ${{ runner.temp }}\ctserver-checks
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install locked dependencies without install scripts
+        run: npm ci --ignore-scripts
+      - name: Install bridge sources without native install scripts
+        run: npm ci --ignore-scripts --prefix integrations/ct-td-control
+      - name: Offline regressions
+        run: npm test
+      - name: Verify notice and UI asset pins
+        run: node --input-type=module -e "import {checkNoticePins} from './scripts/check-notice-pins.mjs'; import {checkUIAssets} from './scripts/check-ui-assets.mjs'; console.log({notices:checkNoticePins(process.cwd()),ui:checkUIAssets(process.cwd())});"
+      - name: Validate package routing without building or launching
+        run: npm run package:plan

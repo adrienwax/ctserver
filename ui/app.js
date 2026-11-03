@@ -116,7 +116,7 @@ function render() {
   chip('#chip-td', appStatus.kind, appStatus.text)
   $('#chip-td').hidden = !appStatus.text
   $('#chip-td').title = appStatus.detail
-  const v = S.build?.label || 'KRAB v1.0'
+  const v = S.build?.label || 'CTserver'
   if ($('#ver').textContent !== v) $('#ver').textContent = v
   const buildDetail = S.build ? `${S.build.version} · ${S.build.commit}` : 'Build details unavailable'
   $('#ver').title = `${v}\nInternal build: ${buildDetail}`
@@ -127,7 +127,7 @@ function render() {
     $('#state').classList.remove('enter'); void $('#state').offsetWidth; $('#state').classList.add('enter')
     lastKey = key
   }
-  document.title = `CTserver · ${v} · ${d.state}`
+  document.title = `${v} · ${d.state}`
 
   renderStatus(d)
   renderBanner(d)

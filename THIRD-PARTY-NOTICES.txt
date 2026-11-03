@@ -1,3 +1,10 @@
+WINDOWS PACKAGING NOTE
+The packaged Windows runtime omits strict-event-emitter and uses Node EventEmitter
+in four hash-pinned loupedeck files. The original loupedeck MIT notice is retained.
+The source dependency inventory below is historical; the runtime modification
+record is resources/ct/node_modules/CTSERVER-PACKAGING-NOTES.json.
+Inter and JetBrains Mono font notices are in third-party/fonts/.
+
 THIRD-PARTY NOTICES — LOCAL PREPARATION
 
 Original project code is MIT, copyright 2026 ak wax. These dependency licences remain separate.

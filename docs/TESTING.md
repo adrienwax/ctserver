@@ -9,7 +9,7 @@ For a candidate supplied privately by the maintainer. There is no public signed 
 1. Open the app. Can you distinguish **LIVE**, **MAP** and **DIAGNOSE**?
 2. Follow [Map your first key](../README.md#map-your-first-key) through binding and label editing. Is the selected key and page/shared scope obvious?
 3. Wait for Saved, use Undo/Redo once, quit through the tray, and reopen. Is the intended mapping retained?
-4. In the disposable environment, check uninstall/reinstall and expected settings retention. Use test data only.
+4. For the portable download, reopen the same CTserver.exe and confirm the mapping remains. There is no installer or uninstaller in this download; use test data only.
 
 ## If a device check is needed
 

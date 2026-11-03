@@ -15,6 +15,8 @@ test('generic defaults validate without a private project or automatic app launc
   for(const file of files)assert.deepEqual(checkProfile(JSON.parse(fs.readFileSync(new URL(file,dir),'utf8')),ids,apps),[],file);
   for(const app of Object.values(apps))if(typeof app==='object')assert.equal(app.launch,undefined);
   assert.equal(apps.touchdesigner.default,undefined);
+  assert.equal(apps.moshpit.exe,'Moshpit.exe');
+  assert.equal(apps.moshpit.endpointFile,'%APPDATA%/Moshpit 3/control-endpoint.json');
   assert.match(homeAppRoute('moshpit').error,/Open the app normally/);
   assert.match(guidesRoute().file,/guide\.html$/);
   assert.deepEqual(checkApps({x:{name:'X',target:'keys',launchSha256:'bad'}}).length,1);

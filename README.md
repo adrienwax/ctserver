@@ -14,7 +14,7 @@ Choose an app profile, map its keys and dials, and use the same labelled control
 | What you want | Available today |
 | --- | --- |
 | Understand the app or plan a mapping | Read the walkthrough below. You can edit maps without a connected CT. |
-| Download a Windows installer | **Not public yet.** Binary licence, clean-Windows and signing checks remain. [Release status](https://github.com/adrienwax/ctserver/releases). |
+| Download the Windows app | **Unsigned test download being prepared.** Signing and a second-PC check remain. [Release status](https://github.com/adrienwax/ctserver/releases). |
 | Run the source | [Windows setup](docs/DEVELOPMENT.md#run-from-source): Git, Node.js 24, npm and compatible native dependencies. |
 | Try a privately supplied candidate | Follow the [short first-use checklist](docs/TESTING.md). |
 

@@ -1,2 +1,5 @@
 # cmd needs CRLF in batch files
 *.bat text eol=crlf
+
+# Keep upstream notices byte-identical to their reviewed hashes.
+third-party/** -text

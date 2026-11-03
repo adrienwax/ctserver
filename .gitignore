@@ -11,3 +11,8 @@ node_modules/
 /config/.updates/
 /config/.upgrade-history/
 /config/.generated/
+
+# Generated Windows packaging inputs.
+/build/
+/waxyct.ico
+/third-party-binary/
