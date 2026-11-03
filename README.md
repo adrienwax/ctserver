@@ -14,9 +14,12 @@ Choose an app profile, map its keys and dials, and use the same labelled control
 | What you want | Available today |
 | --- | --- |
 | Understand the app or plan a mapping | Read the walkthrough below. You can edit maps without a connected CT. |
-| Download the Windows app | **Unsigned test download being prepared.** Signing and a second-PC check remain. [Release status](https://github.com/adrienwax/ctserver/releases). |
+| Download the Windows app | [CTserver.exe](https://github.com/adrienwax/ctserver/releases/download/v1.0.0-rc.1-test/CTserver.exe) — one unsigned Windows x64 portable test download. |
 | Run the source | [Windows setup](docs/DEVELOPMENT.md#run-from-source): Git, Node.js 24, npm and compatible native dependencies. |
-| Try a privately supplied candidate | Follow the [short first-use checklist](docs/TESTING.md). |
+| Latest public test | [rc1 prerelease](https://github.com/adrienwax/ctserver/releases/tag/v1.0.0-rc.1-test) · [short first-use checklist](docs/TESTING.md). |
+| Stable release | Not yet accepted. Signing and a second-PC check remain open. |
+
+**Download `CTserver.exe` and double-click it.** Electron and the required device libraries are included; no Node.js, Python, installer or Sandbox is needed to run it. Settings persist in your Windows user profile. This is an **unsigned test prerelease**; report Windows warnings rather than disabling protection. [Checks and limitations](docs/RELEASE-STATUS.md).
 
 **“Code → Download ZIP” is source code, not an installer.** Windows x64 and **Loupedeck CT** are the current target. Other operating systems and Loupedeck models are not validated by this project.
 

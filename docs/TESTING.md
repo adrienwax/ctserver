@@ -2,7 +2,9 @@
 
 [← CTserver](../README.md) · [Make a mapping](FIRST-MAPPING.md)
 
-For a candidate supplied privately by the maintainer. There is no public signed installer yet. Use a disposable test environment and report Windows warnings rather than disabling security to get past them.
+Download [CTserver.exe from the rc1 test release](https://github.com/adrienwax/ctserver/releases/download/v1.0.0-rc.1-test/CTserver.exe). This is an unsigned portable Windows x64 app, not an accepted stable release. Use test mappings and report Windows warnings rather than disabling security. No Sandbox, installer or separate runtime download is required.
+
+The exact release EXE passed a private-profile launch/MAP/normal-exit check on the maintainer’s PC. A second-PC check and signing remain open; the steps below are a feedback checklist, not a claim that every app profile or hardware setup is validated.
 
 ## Start without the controller
 
