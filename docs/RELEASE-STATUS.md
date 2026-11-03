@@ -2,17 +2,14 @@
 
 [← CTserver](../README.md)
 
-**Public source is available. Public Windows installers are not yet available.** The Releases page must not imply an unsigned local candidate is a signed, clean-machine-approved download.
+Public source is available. A self-contained, unsigned Windows x64 test download is being prepared locally; it has not yet been uploaded.
 
-Remaining binary gates:
+Completed locally: offline regressions and settings-preservation checks; native launch, populated MAP view and normal app exit in a private profile; package notice/hash reconciliation and Windows-native-module provenance. The prior local portable candidate also passed extraction, populated MAP navigation and normal quit; its process tree exited and managed temporary files were removed. The public download must be built from a committed source revision and checked as that exact artifact. Release-specific checksums and acceptance results belong with its release notes; the earlier private-tree candidate is not the public download.
 
-1. Reconcile the exact packaged source, native dependencies, generic defaults and notices.
-2. Resolve the `strict-event-emitter` 0.5.1 notice gap: its package declares MIT, but the exact package and upstream tag inspected lacked the complete notice. No replacement notice has been invented. This source repository does not vendor its implementation.
-3. Complete clean-Windows install, first use, persistence, close/reopen and uninstall checks.
-4. Settle signing and verify the final app, generated uninstaller and installer.
+The Windows build replaces four pinned loupedeck emitter imports with Node's built-in emitter and omits strict-event-emitter. The missing upstream notice was not invented or declared resolved: that implementation is not shipped in the Windows package. Dependency changes require renewed compatibility review.
 
-Earlier public-source checks installed dependencies with scripts disabled and passed the offline suite. Those results did not run native addon installation scripts, open the controller or establish fresh-Windows acceptance.
+Signing and a second-PC check remain open. Any initial download must be labelled an unsigned test prerelease, not a signed stable release. There is no hardware or every-app acceptance claim from offline checks. No Sandbox is required to run the portable app.
 
-Profiles provide control mappings, not the third-party apps or private project files. Only claim a specific software/device workflow when it has been exercised; do not infer it from a catalogue entry or screenshot.
+Generic profiles do not include third-party software, personal projects, media or private ATLAS content. Existing CTserver settings are retained in `%APPDATA%/waxyct`; the download does not silently replace an existing startup shortcut.
 
-The original code is MIT. Dependency and asset licences remain separate: [notices](../THIRD-PARTY-NOTICES.txt), [assets](../ASSET-NOTICES.txt), [licences](../third-party).
+[Dependency notices](../THIRD-PARTY-NOTICES.txt) · [Asset notices](../ASSET-NOTICES.txt) · [First mapping](FIRST-MAPPING.md)

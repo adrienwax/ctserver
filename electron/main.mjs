@@ -105,7 +105,7 @@ else {
     }
     win = new BrowserWindow({
       ...homeWindowBounds(screen.getDisplayNearestPoint(screen.getCursorScreenPoint()).workArea),
-      title: homeCandidate?'CTserver Home candidate r04':'CTserver · KRAB v1.0', icon: path.join(APP_DIR, 'waxyct.ico'),
+      title: homeCandidate?'CTserver Candidate':'CTserver', icon: path.join(APP_DIR, 'waxyct.ico'),
       backgroundColor: '#0b0d10', show: false, autoHideMenuBar: true,
       webPreferences: { contextIsolation: true, sandbox: true },
     })
@@ -115,7 +115,7 @@ else {
     win.on('minimize', () => win.hide())
     win.on('session-end', () => { quitting = true })   // Windows logging off or shutting down: a real close, the CT released first
     tray = new Tray(path.join(APP_DIR, 'waxyct.ico'))
-    tray.setToolTip(homeCandidate?'CTserver Home candidate r04':'CTserver · KRAB v1.0')
+    tray.setToolTip(`CTserver${homeCandidate?' Candidate':''}`)
     tray.setContextMenu(Menu.buildFromTemplate([
       { label: 'Open CTserver', click: showWin },
       { type: 'separator' },

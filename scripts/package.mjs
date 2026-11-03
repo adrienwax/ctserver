@@ -5,10 +5,16 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { bridgeRuntimeFiles, checkBridgeDisplay } from './bridge-runtime.mjs'
+import { stageBridgeModules } from './stage-bridge-modules.mjs'
+import { checkNoticePins } from './check-notice-pins.mjs'
+import { checkUIAssets } from './check-ui-assets.mjs'
 import { ensureScratch, configureToolCaches, requireScratchOutput } from './build-scratch/bootstrap.mjs'
 
 const scratch = ensureScratch('package')
 const unpackedOnly = process.argv.includes('--unpacked')
+const candidate = process.argv.includes('--candidate')
+const installer = process.argv.includes('--installer')
+const productName = candidate ? 'CTserver Candidate' : 'CTserver'
 configureToolCaches(scratch)
 const HERE = fileURLToPath(new URL('..', import.meta.url))
 const BRIDGE = process.env.WAXYCT_BRIDGE_SRC || path.join(HERE, 'integrations', 'ct-td-control')
@@ -28,16 +34,23 @@ const out = path.join(scratch.temp, 'builder-output')
 const configFile = path.join(scratch.temp, 'electron-builder.json')
 const pkg = JSON.parse(fs.readFileSync(path.join(HERE, 'package.json'), 'utf8'))
 const { version } = pkg
-const dest = path.join(RELEASES, `waxyct.${version}.exe`)
+const artifact = installer ? 'CTserver-Setup.exe' : 'CTserver.exe'
+const dest = path.join(RELEASES, artifact)
 const folder = path.join(RELEASES, `waxyct.${version}`)
 if (fs.existsSync(dest) || fs.existsSync(folder)) throw new Error(`Release ${version} already exists in ${RELEASES}. Choose a new version/output folder; existing releases are preserved.`)
 const bridgeResources = pkg.build.extraResources.filter(r => typeof r === 'object' && r.from === 'build/ct')
 if (bridgeResources.length !== 1) throw new Error('Expected exactly one build/ct resource declaration; review the packaging adapter.')
 const config = {
   ...pkg.build,
+  appId:candidate?'local.waxyct.candidate':pkg.build.appId, productName,
+  extraMetadata:{productName,localCandidate:candidate},
+  portable:{...pkg.build.portable,artifactName:'CTserver.exe'},
+  afterPack:path.join(HERE,'scripts/installer-after-pack.cjs'),
+  win:{...pkg.build.win,target:[{target:installer?'nsis':'portable',arch:['x64']}]},
+  nsis:{oneClick:true,perMachine:false,runAfterFinish:false,deleteAppDataOnUninstall:false,artifactName:'CTserver-Setup.${ext}'},
   electronDist: dist,
   directories: { ...pkg.build.directories, output: out },
-  files: [...pkg.build.files.filter(f => f !== 'build-info.json'), { from: info, to: '.', filter: ['build-info.json'] }],
+  files: [...pkg.build.files.filter(f => f !== 'build-info.json'), 'LICENSE','THIRD-PARTY-NOTICES.txt','ASSET-NOTICES.txt','UNSIGNED-BUILD-NOTICE.txt','third-party/**/*', '!ui/icon-reference/**', { from: info, to: '.', filter: ['build-info.json'] }],
   extraResources: pkg.build.extraResources.map(r => r === bridgeResources[0] ? { ...r, from: ct } : r),
 }
 // A tiny plan proves routing/configuration without copying runtimes, importing
@@ -48,7 +61,10 @@ if (process.argv.includes('--plan')) {
   console.log(`Package routing plan only: ${path.join(RELEASES, 'package-plan.json')}`)
   process.exit(0)
 }
+checkNoticePins(HERE)
+checkUIAssets(HERE)
 const runtimeFiles = bridgeRuntimeFiles(BRIDGE)
+execFileSync(process.env.KRAB_BUILD_PYTHON||'python',[path.join(HERE,'scripts/make-icon.py')],{cwd:HERE,windowsHide:true,stdio:'pipe'})
 for (const p of [builder, path.join(dist, 'electron.exe'), path.join(BRIDGE, 'node_modules', 'loupedeck', 'package.json'), path.join(BRIDGE, 'node_modules', 'serialport', 'package.json')])
   if (!fs.existsSync(p)) throw new Error(`Missing ${p}. Run npm ci, npm run setup:electron, then npm run setup:bridge in this checkout.`)
 for (const [name, expected] of Object.entries(JSON.parse(fs.readFileSync(path.join(HERE, 'package.json'), 'utf8')).devDependencies)) {
@@ -57,7 +73,8 @@ for (const [name, expected] of Object.entries(JSON.parse(fs.readFileSync(path.jo
 }
 // Load the native dependencies with the exact Electron shipped, without importing
 // bridge/host/router startup code, enumerating ports, or claiming a device.
-const env = { ...process.env, ELECTRON_RUN_AS_NODE: '1' }
+const env = { ...process.env, ELECTRON_RUN_AS_NODE: '1', CSC_IDENTITY_AUTO_DISCOVERY:'false' }
+for(const key of ['CSC_LINK','WIN_CSC_LINK','CSC_KEY_PASSWORD','WIN_CSC_KEY_PASSWORD'])delete env[key];
 execFileSync(path.join(dist, 'electron.exe'), ['--input-type=module', '-e', "await import('serialport'); await import('loupedeck'); console.log('CT dependency imports OK')"], { cwd: BRIDGE, env, stdio: 'pipe', windowsHide: true })
 console.log('Local builder, Electron and versioned bridge dependencies are ready (native imports only; no CT opened).')
 if (process.argv.includes('--check')) process.exit(0)
@@ -74,13 +91,13 @@ checkBridgeDisplay(ct, path.join(dist, 'electron.exe'), env)
 if (fs.existsSync(path.join(BRIDGE, 'td'))) fs.cpSync(path.join(BRIDGE, 'td'), path.join(ct, 'td'), { recursive: true })
 // electron-builder excludes node_modules in extraResources; main restores its name.
 // Materialize the worktree dependency junction; managed scratch must contain plain files.
-fs.cpSync(path.join(BRIDGE, 'node_modules'), path.join(ct, 'modules'), { recursive: true, dereference: true })
+stageBridgeModules(path.join(BRIDGE, 'node_modules'), path.join(ct, 'modules'))
 console.log(`waxyct ${version} (${commit}): building into ${out}`)
-const r = spawnSync(process.execPath, [builder, '--win', ...(unpackedOnly ? ['--dir'] : ['portable']), '--projectDir', HERE, '--config', configFile], { stdio: 'inherit', cwd: HERE, windowsHide: true })
+const r = spawnSync(process.execPath, [builder, '--publish', 'never', '--win', ...(unpackedOnly ? ['--dir'] : [installer?'nsis':'portable']), '--projectDir', HERE, '--config', configFile], { stdio: 'inherit', cwd: HERE, windowsHide: true, env })
 if (r.status !== 0) throw new Error(`electron-builder failed (${r.status}): ${r.error?.message || ''}`)
 fs.mkdirSync(RELEASES, { recursive: true })
 // Retain exclusive creation guarantees, including a concurrent publisher. No
 // directory rename may merge into or replace an existing versioned runtime.
-if (!unpackedOnly) fs.copyFileSync(path.join(out, `waxyct-${version}.exe`), dest, fs.constants.COPYFILE_EXCL)
+if (!unpackedOnly) fs.copyFileSync(path.join(out, artifact), dest, fs.constants.COPYFILE_EXCL)
 fs.cpSync(path.join(out, 'win-unpacked'), folder, { recursive: true, errorOnExist: true, force: false })
-console.log(`wrote ${unpackedOnly ? '' : dest + ' and '}${path.join(folder, 'waxyct.exe')}`)
+console.log(`wrote ${unpackedOnly ? '' : dest + ' and '}${path.join(folder, `${productName}.exe`)}`)

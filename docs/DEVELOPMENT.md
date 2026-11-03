@@ -28,6 +28,20 @@ Alternatively, `npm start` or `waxyct.bat` starts the router with a browser pane
 - `config.example.json` documents optional router overrides. It is not an extra profile you need to activate.
 - Profiles and local endpoint/launch settings may contain private paths or tokens. Do not commit your personal configuration back into this repository.
 
+For personal development, keep settings outside the checkout so app edits do not change the generic templates tracked by Git. From the repository root, seed a separate folder once, then set `WAXYCT_CONFIG` in each development shell:
+
+```powershell
+$ctDevConfig = Join-Path $env:LOCALAPPDATA 'CTserver-dev/config'
+if (-not (Test-Path -LiteralPath $ctDevConfig)) {
+    New-Item -ItemType Directory -Path (Split-Path $ctDevConfig) -Force | Out-Null
+    Copy-Item -LiteralPath './config' -Destination $ctDevConfig -Recurse
+}
+$env:WAXYCT_CONFIG = $ctDevConfig
+node node_modules/electron/cli.js .
+```
+
+An existing folder is left untouched. This environment setting applies to the current shell and its child processes; it does not change your installed CTserver settings or Windows startup. Quit another CT owner normally before launching the development app.
+
 ## Checks
 
 ```powershell
@@ -60,6 +74,19 @@ The many `check-*.mjs` files are tests, not runtime clutter. They remain grouped
 
 ## Packaging and contributions
 
-`npm run package` uses the public portable packaging path. It is distinct from later local NSIS installer candidates. See [release status](RELEASE-STATUS.md) before distributing a binary.
+`npm run package` creates a bundled `CTserver.exe` portable download. The icon generator requires Python and Pillow; the **Pillow** version is pinned in `scripts/requirements-icons.txt`.
+
+The current packaging run used **Python 3.7.9 and Pillow 9.5.0**. This records the tested environment, not a recommendation to install an old Python release; compatibility with newer Python versions has not been verified for this build. Use an isolated environment for build dependencies. With your chosen Python interpreter available as `python`:
+
+```powershell
+python -m pip install -r scripts/requirements-icons.txt
+python -c "import sys, PIL; print(sys.version); print(PIL.__version__)"
+$env:KRAB_BUILD_PYTHON = (Get-Command python).Source
+npm run package
+```
+
+If you use another interpreter path, run that same interpreter with `-m pip` and set `KRAB_BUILD_PYTHON` to its executable; the builder must use the environment containing Pillow. No Python installation is needed to run the downloaded CTserver.exe.
+
+`node scripts/package.mjs --candidate` selects a private test identity; `--installer` produces a separate optional NSIS installer. Packaging checks fonts/notices before building, and the Windows stage omits other-platform drivers and dependency test fixtures. See [release status](RELEASE-STATUS.md) before distributing a binary.
 
 Keep changes focused and include a regression check for changed behaviour. Preserve autosave/Undo, page/shared scope and device ownership rules. Do not remove a profile or adapter merely because your setup does not use it. Report bugs in [Issues](https://github.com/adrienwax/ctserver/issues); vulnerabilities go through [private reporting](https://github.com/adrienwax/ctserver/security/advisories/new).
